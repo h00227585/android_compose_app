@@ -42,6 +42,13 @@ object ExampleData {
             description = "多个六边形",
             icon = IconSource.Resource(R.drawable.ic_hexagon),
             route = "hexagon"
-        )
+        ),
+        Example(
+            id = "survey",
+            title = "调查问卷",
+            description = "调查问卷",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "survey"
+        ),
     )
 }
