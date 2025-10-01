@@ -5,11 +5,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.hdy.compose_examples.ui.task.ExampleListScreen
-import com.hdy.compose_examples.ui.task.HexagonScreen
-import com.hdy.compose_examples.ui.task.SurveyScreen
-import com.hdy.compose_examples.ui.task.TaskListScreen
-import com.hdy.compose_examples.ui.task.UserProfileScreen
+import com.hdy.compose_examples.ui.home.ExampleListScreen
+import com.hdy.compose_examples.ui.hexagon.HexagonScreen
+import com.hdy.compose_examples.ui.survey.SurveyScreen
+import com.hdy.compose_examples.ui.task_list.TaskListScreen
+import com.hdy.compose_examples.ui.user_profile.UserProfileScreen
 
 object Routes {
     const val HOME = "home"

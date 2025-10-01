@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.view_model
+package com.hdy.compose_examples.ui.task_list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,18 +7,11 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-/**
- * 任务列表的 UI 状态
- */
-data class TaskListUiState(
-    val tasks: List<String> = emptyList(),
-    val isLoading: Boolean = false
-)
 
 /**
  * 任务列表 ViewModel
  */
-class TaskViewModel : ViewModel() {
+class TaskListViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(
         TaskListUiState(
             tasks = listOf("学习 Compose", "写代码", "喝咖啡")

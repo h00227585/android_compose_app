@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.task
+package com.hdy.compose_examples.ui.user_profile
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
@@ -35,7 +35,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hdy.compose_examples.data.model.UserProfile
-import com.hdy.compose_examples.view_model.UserProfileViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)

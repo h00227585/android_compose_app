@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.custom
+package com.hdy.compose_examples.ui.components
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size

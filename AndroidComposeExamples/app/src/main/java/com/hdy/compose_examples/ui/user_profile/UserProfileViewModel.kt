@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.view_model
+package com.hdy.compose_examples.ui.user_profile
 
 import androidx.lifecycle.ViewModel
 import com.hdy.compose_examples.data.model.UserProfile

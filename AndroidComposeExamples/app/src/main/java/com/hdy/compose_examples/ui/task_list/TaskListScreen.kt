@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.task
+package com.hdy.compose_examples.ui.task_list
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -37,13 +37,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.hdy.compose_examples.view_model.TaskViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TaskListScreen(
     onBackClick: () -> Unit = {},
-    viewModel: TaskViewModel = viewModel()
+    viewModel: TaskListViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
     var newTaskText by remember { mutableStateOf("") }

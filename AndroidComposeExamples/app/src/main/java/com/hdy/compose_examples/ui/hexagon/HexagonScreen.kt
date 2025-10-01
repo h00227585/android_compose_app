@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.task
+package com.hdy.compose_examples.ui.hexagon
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -22,12 +22,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.hdy.compose_examples.ui.custom.RoundedHexagonShape
+import com.hdy.compose_examples.ui.components.RoundedHexagonShape
 import kotlin.math.sqrt
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.task
+package com.hdy.compose_examples.ui.survey
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
