@@ -50,5 +50,12 @@ object ExampleData {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "survey"
         ),
+        Example(
+            id = "image_gallery",
+            title = "本地图片",
+            description = "本地图片",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "image_gallery"
+        ),
     )
 }

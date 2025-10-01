@@ -100,7 +100,6 @@ fun Hexagon(
     size: Dp,
     cornerRadius: Dp,
     rotation: Float = 0f, // 旋转角度
-    modifier: Modifier = Modifier,
     content: @Composable () -> Unit
 ) {
     val cornerPx = with(LocalDensity.current) { cornerRadius.toPx() } // ✅ 转换
@@ -112,7 +111,7 @@ fun Hexagon(
     val hexHeight = (sqrt(3f) * size.value).dp
 
     Box(
-        modifier = modifier
+        modifier = Modifier
             .offset(x = xShift)
             .size(width = hexWidth, height = hexHeight)
             .clip(shape)

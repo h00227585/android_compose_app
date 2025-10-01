@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
+import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
 import com.hdy.compose_examples.ui.survey.SurveyScreen
 import com.hdy.compose_examples.ui.task_list.TaskListScreen
 import com.hdy.compose_examples.ui.user_profile.UserProfileScreen
@@ -17,6 +18,7 @@ object Routes {
     const val USER_PROFILE = "user_profile"
     const val HEXAGON = "hexagon"
     const val SURVEY = "survey"
+    const val IMAGE_GALLERY = "image_gallery"
 }
 
 /**
@@ -63,6 +65,13 @@ fun AppNavigation(
         // 问卷调查
         composable(Routes.SURVEY) {
             SurveyScreen(
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+
+        // 本地图片 + jetpack paging
+        composable(Routes.IMAGE_GALLERY) {
+            ImageGalleryScreen(
                 onBackClick = { navController.navigateUp() }
             )
         }
