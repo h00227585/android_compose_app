@@ -1,10 +1,12 @@
 package com.hdy.compose_examples.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
@@ -19,6 +21,7 @@ object Routes {
     const val HEXAGON = "hexagon"
     const val SURVEY = "survey"
     const val IMAGE_GALLERY = "image_gallery"
+    const val DICE_ROLLER = "dice_roller"
 }
 
 /**
@@ -72,6 +75,12 @@ fun AppNavigation(
         // 本地图片 + jetpack paging
         composable(Routes.IMAGE_GALLERY) {
             ImageGalleryScreen(
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+
+        composable(Routes.DICE_ROLLER) {
+            DiceRollerScreen(
                 onBackClick = { navController.navigateUp() }
             )
         }

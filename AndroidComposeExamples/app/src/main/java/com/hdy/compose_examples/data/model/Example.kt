@@ -57,5 +57,12 @@ object ExampleData {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "image_gallery"
         ),
+        Example(
+            id = "dice_roller",
+            title = "掷骰子",
+            description = "掷骰子",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "dice_roller"
+        ),
     )
 }
