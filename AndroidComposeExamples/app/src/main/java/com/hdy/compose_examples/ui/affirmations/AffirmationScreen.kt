@@ -27,7 +27,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.hdy.compose_examples.data.model.Affirmation
 import com.hdy.compose_examples.data.source.AffirmationDataSource
-import com.hdy.compose_examples.ui.dice_roller.DiceRoller
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,7 +36,7 @@ fun AffirmationScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("鼓励自己的话") },
+                title = { Text("自我鼓励的话") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, "返回")
