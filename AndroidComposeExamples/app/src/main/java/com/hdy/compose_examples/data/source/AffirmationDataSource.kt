@@ -3,7 +3,7 @@ package com.hdy.compose_examples.data.source
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Affirmation
 
-class AffirmationDataSource {
+object AffirmationDataSource {
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
             Affirmation(R.string.affirmation1, R.drawable.image1),

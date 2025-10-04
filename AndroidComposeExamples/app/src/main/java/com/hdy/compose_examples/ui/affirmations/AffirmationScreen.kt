@@ -50,7 +50,7 @@ fun AffirmationScreen(
         },
         content = { paddingValues ->
             AffirmationList(
-                affirmationList = AffirmationDataSource().loadAffirmations(),
+                affirmationList = AffirmationDataSource.loadAffirmations(),
                 modifier = Modifier.padding(paddingValues)
             )
         }
