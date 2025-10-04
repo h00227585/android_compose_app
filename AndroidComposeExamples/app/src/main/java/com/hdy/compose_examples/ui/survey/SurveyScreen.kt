@@ -38,7 +38,7 @@ fun SurveyScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("问卷调查") },
+                title = { Text("调查问卷") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, "返回")
