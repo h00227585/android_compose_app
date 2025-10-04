@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.hdy.compose_examples.ui.affirmations.AffirmationScreen
 import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
@@ -22,6 +23,7 @@ object Routes {
     const val SURVEY = "survey"
     const val IMAGE_GALLERY = "image_gallery"
     const val DICE_ROLLER = "dice_roller"
+    const val AFFIRMATIONS = "affirmations"
 }
 
 /**
@@ -75,6 +77,12 @@ fun AppNavigation(
         // 本地图片 + jetpack paging
         composable(Routes.IMAGE_GALLERY) {
             ImageGalleryScreen(
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+
+        composable(Routes.AFFIRMATIONS) {
+            AffirmationScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }

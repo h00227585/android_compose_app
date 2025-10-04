@@ -58,6 +58,13 @@ object ExampleData {
             route = "image_gallery"
         ),
         Example(
+            id = "affirmations",
+            title = "自我鼓励的话",
+            description = "自我鼓励的话",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "affirmations"
+        ),
+        Example(
             id = "dice_roller",
             title = "掷骰子",
             description = "掷骰子",
