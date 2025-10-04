@@ -45,6 +45,15 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "image_gallery"
         ),
+
+        // 官方示例
+        Example(
+            id = "birthday_card",
+            title = "生日贺卡",
+            description = "官方示例",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "birthday_card"
+        ),
         Example(
             id = "affirmations",
             title = "自我鼓励的话",
