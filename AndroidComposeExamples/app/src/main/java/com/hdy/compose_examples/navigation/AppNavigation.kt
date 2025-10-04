@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hdy.compose_examples.ui.affirmations.AffirmationScreen
 import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
+import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
 import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
@@ -24,6 +25,7 @@ object Routes {
     const val SURVEY = "survey"
     const val IMAGE_GALLERY = "image_gallery"
     const val BIRTHDAY_CARD = "birthday_card"
+    const val BUSINESS_CARD = "business_card"
     const val AFFIRMATIONS = "affirmations"
     const val TOPICS = "topics"
     const val DICE_ROLLER = "dice_roller"
@@ -87,6 +89,11 @@ fun AppNavigation(
         // 官方示例
         composable(Routes.BIRTHDAY_CARD) {
             BirthdayCardScreen (
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.BUSINESS_CARD) {
+            BusinessCardScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }
