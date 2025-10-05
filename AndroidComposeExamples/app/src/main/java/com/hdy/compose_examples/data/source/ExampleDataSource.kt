@@ -78,6 +78,13 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "tip_calculator"
         ),
+        Example(
+            id = "art_space",
+            title = "艺术画廊",
+            description = "官方示例",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "art_space"
+        ),
         // 可滚动列表
         Example(
             id = "affirmations",
