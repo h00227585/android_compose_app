@@ -60,6 +60,7 @@ dependencies {
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     // 更新的版本(例如,3.3.0)可能不兼容
     implementation("io.coil-kt.coil3:coil-compose:3.0.0")

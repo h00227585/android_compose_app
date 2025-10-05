@@ -14,6 +14,7 @@ import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
 import com.hdy.compose_examples.ui.survey.SurveyScreen
 import com.hdy.compose_examples.ui.task_list.TaskListScreen
+import com.hdy.compose_examples.ui.tip_calculator.TipCalculatorScreen
 import com.hdy.compose_examples.ui.topic.TopicScreen
 import com.hdy.compose_examples.ui.user_profile.UserProfileScreen
 
@@ -26,9 +27,10 @@ object Routes {
     const val IMAGE_GALLERY = "image_gallery"
     const val BIRTHDAY_CARD = "birthday_card"
     const val BUSINESS_CARD = "business_card"
+    const val DICE_ROLLER = "dice_roller"
+    const val TIP_CALCULATOR = "tip_calculator"
     const val AFFIRMATIONS = "affirmations"
     const val TOPICS = "topics"
-    const val DICE_ROLLER = "dice_roller"
 }
 
 /**
@@ -97,6 +99,16 @@ fun AppNavigation(
                 onBackClick = { navController.navigateUp() }
             )
         }
+        composable(Routes.DICE_ROLLER) {
+            DiceRollerScreen(
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.TIP_CALCULATOR) {
+            TipCalculatorScreen(
+                onBackClick = { navController.navigateUp() }
+            )
+        }
         composable(Routes.AFFIRMATIONS) {
             AffirmationScreen (
                 onBackClick = { navController.navigateUp() }
@@ -104,11 +116,6 @@ fun AppNavigation(
         }
         composable(Routes.TOPICS) {
             TopicScreen (
-                onBackClick = { navController.navigateUp() }
-            )
-        }
-        composable(Routes.DICE_ROLLER) {
-            DiceRollerScreen(
                 onBackClick = { navController.navigateUp() }
             )
         }

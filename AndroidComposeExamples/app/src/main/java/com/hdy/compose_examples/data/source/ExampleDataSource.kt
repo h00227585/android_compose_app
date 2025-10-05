@@ -47,6 +47,7 @@ object ExampleDataSource {
         ),
 
         // 官方示例
+        // 基本布局
         Example(
             id = "birthday_card",
             title = "生日贺卡",
@@ -61,6 +62,23 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "business_card"
         ),
+        // 响应式UI：点击按钮
+        Example(
+            id = "dice_roller",
+            title = "掷骰子",
+            description = "官方示例",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "dice_roller"
+        ),
+        // compose 状态
+        Example(
+            id = "tip_calculator",
+            title = "小费计算器",
+            description = "官方示例",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "tip_calculator"
+        ),
+        // 可滚动列表
         Example(
             id = "affirmations",
             title = "自我鼓励的话",
@@ -74,13 +92,6 @@ object ExampleDataSource {
             description = "官方示例",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "topics"
-        ),
-        Example(
-            id = "dice_roller",
-            title = "掷骰子",
-            description = "官方示例",
-            icon = IconSource.Resource(R.drawable.ic_mood),
-            route = "dice_roller"
         ),
     )
 }

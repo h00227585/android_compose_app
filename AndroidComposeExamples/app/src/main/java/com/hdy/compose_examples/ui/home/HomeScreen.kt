@@ -46,6 +46,7 @@ fun ExampleListScreen(
             )
         }
     ) { paddingValues ->
+        // paddingValues的作用是避免 topBar 或 bottomBar 被遮挡
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
