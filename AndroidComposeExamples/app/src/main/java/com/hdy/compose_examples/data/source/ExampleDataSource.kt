@@ -110,11 +110,19 @@ object ExampleDataSource {
         ),
         // Activity生命周期
         Example(
-            id = "activity_lifecycle",
-            title = "Activity 生命周期",
-            description = "官方示例",
+            id = "dessert",
+            title = "甜点",
+            description = "官方示例, Activity 生命周期",
             icon = IconSource.Resource(R.drawable.ic_mood),
-            route = "activity_lifecycle"
+            route = "dessert"
+        ),
+        // Activity生命周期
+        Example(
+            id = "guess_word",
+            title = "猜单词",
+            description = "官方示例, ViewModel",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "guess_word"
         )
     )
 }

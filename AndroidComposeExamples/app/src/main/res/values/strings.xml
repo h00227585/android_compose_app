@@ -60,10 +60,23 @@
     <string name="years_old">%d years old</string>
     <string name="expand_button_content_description">See more or less information about a dog.</string>
 
-    <!-- Activity 生命周期 -->
+    <!-- Activity 生命周期: 甜点 -->
     <string name="dessert_sold">Desserts sold</string>
     <string name="total_revenue">Total Revenue</string>
     <string name="share">Share</string>
     <string name="share_text">I\'ve clicked %1$d Desserts for a total of $%2$d #AndroidDessertClicker</string>
     <string name="sharing_not_available">Sharing Not Available</string>
+
+    <!-- ViewModel: 猜单词游戏 -->
+    <string name="instructions">Unscramble the word using all the letters.</string>
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="score">Score: %d</string>
+    <string name="word_count">%d/%d</string>
+    <string name="enter_your_word">Enter your word</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_scored">"You scored: %d"</string>
+    <string name="exit">Exit</string>
+    <string name="play_again">Play Again</string>
+    <string name="wrong_guess">Wrong Guess!</string>
 </resources>

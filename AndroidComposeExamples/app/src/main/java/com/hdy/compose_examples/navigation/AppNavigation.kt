@@ -11,6 +11,7 @@ import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
 import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
 import com.hdy.compose_examples.ui.dessert.DessertScreen
 import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
+import com.hdy.compose_examples.ui.guess_word.GuessWordScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
@@ -36,7 +37,8 @@ object Routes {
     const val AFFIRMATIONS = "affirmations"
     const val TOPICS = "topics"
     const val MATERIAL = "material"
-    const val ACTIVITY_LIFECYCLE = "activity_lifecycle"
+    const val DESSERT = "dessert"
+    const val GUESS_WORD = "guess_word"
 }
 
 /**
@@ -135,8 +137,13 @@ fun AppNavigation(
                 onBackClick = { navController.navigateUp() }
             )
         }
-        composable(Routes.ACTIVITY_LIFECYCLE) {
+        composable(Routes.DESSERT) {
             DessertScreen (
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.GUESS_WORD) {
+            GuessWordScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }
