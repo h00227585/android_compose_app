@@ -9,6 +9,7 @@ import com.hdy.compose_examples.ui.affirmations.AffirmationScreen
 import com.hdy.compose_examples.ui.art_space.ArtSpaceScreen
 import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
 import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
+import com.hdy.compose_examples.ui.dessert.DessertScreen
 import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
@@ -35,6 +36,7 @@ object Routes {
     const val AFFIRMATIONS = "affirmations"
     const val TOPICS = "topics"
     const val MATERIAL = "material"
+    const val ACTIVITY_LIFECYCLE = "activity_lifecycle"
 }
 
 /**
@@ -130,6 +132,11 @@ fun AppNavigation(
         }
         composable(Routes.MATERIAL) {
             MaterialScreen (
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.ACTIVITY_LIFECYCLE) {
+            DessertScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }

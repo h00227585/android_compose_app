@@ -100,13 +100,21 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "topics"
         ),
-        // material
+        // Material
         Example(
             id = "material",
-            title = "material",
+            title = "Material",
             description = "官方示例",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "material"
+        ),
+        // Activity生命周期
+        Example(
+            id = "activity_lifecycle",
+            title = "Activity 生命周期",
+            description = "官方示例",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "activity_lifecycle"
         )
     )
 }
