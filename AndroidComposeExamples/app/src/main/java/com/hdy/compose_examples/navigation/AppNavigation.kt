@@ -13,6 +13,7 @@ import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
+import com.hdy.compose_examples.ui.material.MaterialScreen
 import com.hdy.compose_examples.ui.survey.SurveyScreen
 import com.hdy.compose_examples.ui.task_list.TaskListScreen
 import com.hdy.compose_examples.ui.tip_calculator.TipCalculatorScreen
@@ -33,6 +34,7 @@ object Routes {
     const val ART_SPACE = "art_space"
     const val AFFIRMATIONS = "affirmations"
     const val TOPICS = "topics"
+    const val MATERIAL = "material"
 }
 
 /**
@@ -123,6 +125,11 @@ fun AppNavigation(
         }
         composable(Routes.TOPICS) {
             TopicScreen (
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.MATERIAL) {
+            MaterialScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }

@@ -66,6 +66,9 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-compose:3.0.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0")
 
+    // material 扩展图标
+    implementation("androidx.compose.material:material-icons-extended")
+
     // compose扩展库
 //    implementation("com.google.accompanist:accompanist-permissions:0.37.3")
 

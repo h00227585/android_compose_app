@@ -48,7 +48,7 @@ fun ArtSpaceScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("艺术画廊") },
+                title = { Text("艺术空间") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, "返回")

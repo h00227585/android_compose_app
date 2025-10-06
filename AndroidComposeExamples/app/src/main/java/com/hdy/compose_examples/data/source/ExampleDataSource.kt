@@ -80,7 +80,7 @@ object ExampleDataSource {
         ),
         Example(
             id = "art_space",
-            title = "艺术画廊",
+            title = "艺术空间",
             description = "官方示例",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "art_space"
@@ -100,5 +100,13 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "topics"
         ),
+        // material
+        Example(
+            id = "material",
+            title = "material",
+            description = "官方示例",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "material"
+        )
     )
 }
