@@ -17,6 +17,7 @@ import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
 import com.hdy.compose_examples.ui.material.MaterialScreen
+import com.hdy.compose_examples.ui.reply.ReplyScreen
 import com.hdy.compose_examples.ui.survey.SurveyScreen
 import com.hdy.compose_examples.ui.task_list.TaskListScreen
 import com.hdy.compose_examples.ui.tip_calculator.TipCalculatorScreen
@@ -41,6 +42,7 @@ object Routes {  // route: 与路线名称对应的字符串
     const val DESSERT = "dessert"
     const val GUESS_WORD = "guess_word"
     const val CUPCAKE = "cupcake"
+    const val REPLY = "reply"
 }
 
 /**
@@ -151,6 +153,11 @@ fun AppNavigation(
         }
         composable(Routes.CUPCAKE) {
             CupcakeScreen (
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.REPLY) {
+            ReplyScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }

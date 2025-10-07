@@ -132,5 +132,13 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "cupcake"
         ),
+        // 动态导航，自适应屏幕
+        Example(
+            id = "reply",
+            title = "reply",
+            description = "官方示例, 动态导航+自适应屏幕",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "reply"
+        ),
     )
 }
