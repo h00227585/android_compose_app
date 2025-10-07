@@ -3,6 +3,8 @@
     <dimen name="padding_small">8dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
 
-    <dimen name="dog_image_size">64dp</dimen>
-    <dimen name="image_size_150">64dp</dimen>
+    <dimen name="image_size_64">64dp</dimen>
+    <dimen name="image_size_150">150dp</dimen>
+
+    <dimen name="thickness_divider">1dp</dimen>
 </resources>

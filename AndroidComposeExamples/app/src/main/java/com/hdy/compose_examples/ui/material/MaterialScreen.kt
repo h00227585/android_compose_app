@@ -187,7 +187,7 @@ fun WoofTopAppBar(modifier: Modifier = Modifier, onBackClick: () -> Unit = {}) {
             ) {
                 Image(
                     modifier = Modifier
-                        .size(dimensionResource(R.dimen.dog_image_size))
+                        .size(dimensionResource(R.dimen.image_size_64))
                         .padding(dimensionResource(R.dimen.padding_small)),
                     painter = painterResource(R.drawable.ic_woof_logo),
 
@@ -220,7 +220,7 @@ fun DogIcon(
 ) {
     Image(
         modifier = modifier
-            .size(dimensionResource(R.dimen.dog_image_size))
+            .size(dimensionResource(R.dimen.image_size_64))
             .padding(dimensionResource(R.dimen.padding_small))
             .clip(MaterialTheme.shapes.small),
         contentScale = ContentScale.Crop,

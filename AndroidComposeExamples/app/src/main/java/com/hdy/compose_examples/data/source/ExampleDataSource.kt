@@ -116,13 +116,21 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "dessert"
         ),
-        // Activity生命周期
+        // ViewModel
         Example(
             id = "guess_word",
             title = "猜单词",
             description = "官方示例, ViewModel",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "guess_word"
-        )
+        ),
+        // 导航
+        Example(
+            id = "cupcake",
+            title = "cupcake",
+            description = "官方示例, Navigation",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "cupcake"
+        ),
     )
 }

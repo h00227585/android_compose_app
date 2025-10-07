@@ -9,6 +9,7 @@ import com.hdy.compose_examples.ui.affirmations.AffirmationScreen
 import com.hdy.compose_examples.ui.art_space.ArtSpaceScreen
 import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
 import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
+import com.hdy.compose_examples.ui.cupcake.CupcakeScreen
 import com.hdy.compose_examples.ui.dessert.DessertScreen
 import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.guess_word.GuessWordScreen
@@ -22,7 +23,7 @@ import com.hdy.compose_examples.ui.tip_calculator.TipCalculatorScreen
 import com.hdy.compose_examples.ui.topic.TopicScreen
 import com.hdy.compose_examples.ui.user_profile.UserProfileScreen
 
-object Routes {
+object Routes {  // route: 与路线名称对应的字符串
     const val HOME = "home"
     const val TASK_LIST = "task_list"
     const val USER_PROFILE = "user_profile"
@@ -39,6 +40,7 @@ object Routes {
     const val MATERIAL = "material"
     const val DESSERT = "dessert"
     const val GUESS_WORD = "guess_word"
+    const val CUPCAKE = "cupcake"
 }
 
 /**
@@ -144,6 +146,11 @@ fun AppNavigation(
         }
         composable(Routes.GUESS_WORD) {
             GuessWordScreen (
+                onBackClick = { navController.navigateUp() }
+            )
+        }
+        composable(Routes.CUPCAKE) {
+            CupcakeScreen (
                 onBackClick = { navController.navigateUp() }
             )
         }
