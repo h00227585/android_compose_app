@@ -187,4 +187,18 @@ object WordDataSource {
             "zone",
             "zeal"
         )
+
+    // 有问题的写法
+//    private val wordLengthMap: Map<Int, String> = allWords.associateBy({ it.length }, { it })
+//    internal fun getUnscrambledWord(scrambledWord: String) = wordLengthMap[scrambledWord.length] ?: ""
+
+    private val wordMap: Map<String, String> =
+        allWords.associateBy(
+            { it.toCharArray().sorted().joinToString("") }, // 键：排序后的字母
+            { it }                                          // 值：原始单词
+        )
+    fun getUnscrambledWord(scrambledWord: String): String {
+        val key = scrambledWord.toCharArray().sorted().joinToString("")
+        return wordMap[key] ?: ""
+    }
 }

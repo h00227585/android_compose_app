@@ -52,7 +52,8 @@ import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.source.WordDataSource
 import com.hdy.compose_examples.navigation.AppNavigation
 
-
+// 根据打乱字母顺序的单词猜测正确的单词
+//
 // 将 word_count stringRes 的两个参数都格式化输出
 //
 // 单击对话框dismiss button时不退出activity
