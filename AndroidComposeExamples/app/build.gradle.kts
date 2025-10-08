@@ -71,6 +71,9 @@ dependencies {
     // material 扩展图标
     implementation("androidx.compose.material:material-icons-extended")
 
+    // kotlinx-coroutines-test
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.2")
+
     // compose扩展库
 //    implementation("com.google.accompanist:accompanist-permissions:0.37.3")
 

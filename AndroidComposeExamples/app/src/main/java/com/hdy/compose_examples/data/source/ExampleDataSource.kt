@@ -127,7 +127,7 @@ object ExampleDataSource {
         // 导航
         Example(
             id = "cupcake",
-            title = "cupcake",
+            title = "Cupcake",
             description = "官方示例, Navigation",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "cupcake"
@@ -135,10 +135,18 @@ object ExampleDataSource {
         // 动态导航，自适应屏幕
         Example(
             id = "reply",
-            title = "reply",
+            title = "Reply",
             description = "官方示例, 动态导航+自适应屏幕",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "reply"
+        ),
+        // 网络和协程
+        Example(
+            id = "race_tracker",
+            title = "RaceTracker",
+            description = "官方示例, 网络+协程",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "race_tracker"
         ),
     )
 }
