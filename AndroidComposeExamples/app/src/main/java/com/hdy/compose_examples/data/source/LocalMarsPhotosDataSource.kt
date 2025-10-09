@@ -23,6 +23,7 @@ class LocalMarsPhotosDataSource(
                 val jsonString = inputStream.bufferedReader().use { it.readText() }
                 // 使用 kotlinx.serialization 解析 JSON 字符串
                 // 注意：需要确保 MarsPhoto 类是可序列化的 (@Serializable)
+                // 因为 json 是列表格式的，所以，使用 List<MarsPhoto>
                 return@withContext Json.decodeFromString<List<MarsPhoto>>(jsonString)
             } catch (e: IOException) {
                 // 处理文件读取错误
