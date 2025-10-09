@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Account

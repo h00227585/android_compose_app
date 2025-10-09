@@ -1,6 +1,5 @@
 package com.hdy.compose_examples.ui.guess_word
 
-import android.app.Activity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,7 +21,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
@@ -40,7 +38,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -49,8 +46,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.source.WordDataSource
-import com.hdy.compose_examples.navigation.AppNavigation
+import com.hdy.compose_examples.data.local.staticdata.WordData
 
 // 根据打乱字母顺序的单词猜测正确的单词
 //
@@ -204,7 +200,7 @@ fun GameLayout(
                     .background(colorScheme.surfaceTint)
                     .padding(horizontal = 10.dp, vertical = 4.dp)
                     .align(alignment = Alignment.End),
-                text = stringResource(R.string.word_count, wordCount, WordDataSource.MAX_NO_OF_WORDS),
+                text = stringResource(R.string.word_count, wordCount, WordData.MAX_NO_OF_WORDS),
                 style = typography.titleMedium,
                 color = colorScheme.onPrimary
             )

@@ -28,7 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.hdy.compose_examples.data.model.Example
 import com.hdy.compose_examples.data.model.IconSource
-import com.hdy.compose_examples.data.source.ExampleDataSource
+import com.hdy.compose_examples.data.local.staticdata.ExampleData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -54,7 +54,7 @@ fun ExampleListScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            items(ExampleDataSource.examples) { example ->
+            items(ExampleData.examples) { example ->
                 ExampleCard(
                     example = example,
                     onClick = { onExampleClick(example.route) }

@@ -1,8 +1,8 @@
 package com.hdy.compose_examples.guess_word
 
-import com.hdy.compose_examples.data.source.WordDataSource.MAX_NO_OF_WORDS
-import com.hdy.compose_examples.data.source.WordDataSource.SCORE_INCREASE
-import com.hdy.compose_examples.data.source.WordDataSource.getUnscrambledWord
+import com.hdy.compose_examples.data.local.staticdata.WordData.MAX_NO_OF_WORDS
+import com.hdy.compose_examples.data.local.staticdata.WordData.SCORE_INCREASE
+import com.hdy.compose_examples.data.local.staticdata.WordData.getUnscrambledWord
 import com.hdy.compose_examples.ui.guess_word.GuessWordViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

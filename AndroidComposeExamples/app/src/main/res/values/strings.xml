@@ -13,9 +13,11 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
 
+    <!-- birthday card -->
     <string name="happy_birthday_text">Happy Birthday Sam!</string>
     <string name="signature_text">From Emma</string>
 
+    <!-- tip calculator -->
     <string name="calculate_tip">Calculate Tip</string>
     <string name="bill_amount">Bill Amount</string>
     <string name="tip_amount">Tip Amount: %s</string>
@@ -33,6 +35,7 @@
     <string name="affirmation9">Things will unfold at precisely the right time.</string>
     <string name="affirmation10">I will be present in all the moments that this day brings.</string>
 
+    <!-- art -->
     <string name="architecture">Architecture</string>
     <string name="crafts">Crafts</string>
     <string name="business">Business</string>

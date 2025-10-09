@@ -1,9 +1,9 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Artwork
 
-object ArtWorkDataSource {
+object ArtWorkData {
     val artworks = listOf(
         Artwork(
             imageRes = R.drawable.image1,

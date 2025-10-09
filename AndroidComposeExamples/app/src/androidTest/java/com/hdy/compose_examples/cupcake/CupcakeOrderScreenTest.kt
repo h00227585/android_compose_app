@@ -8,7 +8,7 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.source.CupcakeDataSource
+import com.hdy.compose_examples.data.local.staticdata.CupcakeData
 import com.hdy.compose_examples.ui.cupcake.OrderSummaryScreen
 import com.hdy.compose_examples.ui.cupcake.OrderUiState
 import com.hdy.compose_examples.ui.cupcake.SelectOptionScreen
@@ -43,13 +43,13 @@ class CupcakeOrderScreenTest {
         // When StartOrderScreen is loaded
         composeTestRule.setContent {
             StartOrderScreen(
-                quantityOptions = CupcakeDataSource.quantityOptions,
+                quantityOptions = CupcakeData.quantityOptions,
                 onNextButtonClicked = {}
             )
         }
 
         // Then all the options are displayed on the screen.
-        CupcakeDataSource.quantityOptions.forEach {
+        CupcakeData.quantityOptions.forEach {
             composeTestRule.onNodeWithStringId(it.first).assertIsDisplayed()
         }
     }

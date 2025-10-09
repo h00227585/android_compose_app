@@ -10,7 +10,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -33,7 +32,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.source.CupcakeDataSource
+import com.hdy.compose_examples.data.local.staticdata.CupcakeData
 
 /**
  * enum values that represent the screens in the app
@@ -115,7 +114,7 @@ fun CupcakeScreen(
         ) {
             composable(route = CupcakeRoute.Start.name) {
                 StartOrderScreen(
-                    quantityOptions = CupcakeDataSource.quantityOptions,
+                    quantityOptions = CupcakeData.quantityOptions,
                     onNextButtonClicked = {
                         viewModel.setQuantity(it)
                         navController.navigate(CupcakeRoute.Flavor.name)
@@ -133,7 +132,7 @@ fun CupcakeScreen(
                     onCancelButtonClicked = {
                         cancelOrderAndNavigateToStart(viewModel, navController)
                     },
-                    options = CupcakeDataSource.flavors.map { id -> context.resources.getString(id) },
+                    options = CupcakeData.flavors.map { id -> context.resources.getString(id) },
                     onSelectionChanged = { viewModel.setFlavor(it) },
                     modifier = Modifier.fillMaxHeight()
                 )

@@ -1,9 +1,9 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Topic
 
-object TopicDataSource {
+object TopicData {
     val topics = listOf(
         Topic(R.string.architecture, 58, R.drawable.architecture),
         Topic(R.string.crafts, 121, R.drawable.crafts),

@@ -33,7 +33,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Topic
-import com.hdy.compose_examples.data.source.TopicDataSource
+import com.hdy.compose_examples.data.local.staticdata.TopicData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -75,7 +75,7 @@ fun TopicGrid(modifier: Modifier = Modifier, paddingValues: PaddingValues = Padd
         modifier = modifier,
         contentPadding = paddingValues
     ) {
-        items(TopicDataSource.topics) { topic ->
+        items(TopicData.topics) { topic ->
             TopicCard(topic)
         }
     }

@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
@@ -7,8 +7,7 @@ import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Example
 import com.hdy.compose_examples.data.model.IconSource
 
-
-object ExampleDataSource {
+object ExampleData {
     val examples = listOf(
         Example(
             id = "task_list",

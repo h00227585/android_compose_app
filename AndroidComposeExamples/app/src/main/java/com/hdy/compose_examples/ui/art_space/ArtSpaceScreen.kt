@@ -35,7 +35,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.hdy.compose_examples.data.model.Artwork
-import com.hdy.compose_examples.data.source.ArtWorkDataSource
+import com.hdy.compose_examples.data.local.staticdata.ArtWorkData
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -66,7 +66,7 @@ fun ArtSpaceScreen(
 
 @Composable
 fun ArtSpace(modifier: Modifier = Modifier) {
-    val artworks = ArtWorkDataSource.artworks
+    val artworks = ArtWorkData.artworks
     var currentIndex by remember { mutableIntStateOf(0) }
     val currentArtwork = artworks[currentIndex]
 

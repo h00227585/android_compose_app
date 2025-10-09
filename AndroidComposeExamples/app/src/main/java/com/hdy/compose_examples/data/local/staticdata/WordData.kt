@@ -1,6 +1,6 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
-object WordDataSource {
+object WordData {
     const val MAX_NO_OF_WORDS = 6
     const val SCORE_INCREASE = 20
 

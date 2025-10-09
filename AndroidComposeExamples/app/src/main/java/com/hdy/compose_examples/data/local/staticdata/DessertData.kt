@@ -1,9 +1,9 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Dessert
 
-object DessertDataSource {
+object DessertData {
     val dessertList = listOf(
         Dessert(R.drawable.cupcake, 5, 0),
         Dessert(R.drawable.donut, 5, 5),

@@ -5,7 +5,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.hdy.compose_examples.data.model.LocalImage
-import com.hdy.compose_examples.data.source.LocalImagePagingSource
+import com.hdy.compose_examples.data.local.mediastore.LocalImagePagingSource
 import kotlinx.coroutines.flow.Flow
 
 // 数据仓库，封装数据访问逻辑

@@ -42,7 +42,7 @@ import com.hdy.compose_examples.data.model.MarsPhoto
 import com.hdy.compose_examples.data.remote.MarsApiService
 import com.hdy.compose_examples.data.repository.LocalMarsPhotosRepository
 import com.hdy.compose_examples.data.repository.NetworkMarsPhotosRepository
-import com.hdy.compose_examples.data.source.LocalMarsPhotosDataSource
+import com.hdy.compose_examples.data.local.staticdata.LocalMarsPhotosData
 import com.hdy.compose_examples.domain.repository.MarsPhotosRepository
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json
@@ -66,7 +66,7 @@ fun MarsPhotosScreen() {
                 // 必须使用 applicationContext，并且放在 remember 中
                 val context = LocalContext.current.applicationContext
                 remember {
-                    val localDataSource = LocalMarsPhotosDataSource(
+                    val localDataSource = LocalMarsPhotosData(
                         context = context,
                         jsonFileName = "mars_photos.json"
                     )

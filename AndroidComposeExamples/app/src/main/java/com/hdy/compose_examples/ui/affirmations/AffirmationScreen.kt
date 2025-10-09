@@ -26,7 +26,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.hdy.compose_examples.data.model.Affirmation
-import com.hdy.compose_examples.data.source.AffirmationDataSource
+import com.hdy.compose_examples.data.local.staticdata.AffirmationData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,7 +50,7 @@ fun AffirmationScreen(
         },
         content = { paddingValues ->
             AffirmationList(
-                affirmationList = AffirmationDataSource.loadAffirmations(),
+                affirmationList = AffirmationData.loadAffirmations(),
                 modifier = Modifier.padding(paddingValues)
             )
         }

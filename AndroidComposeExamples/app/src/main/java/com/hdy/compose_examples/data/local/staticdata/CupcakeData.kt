@@ -1,9 +1,8 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
 
-
-object CupcakeDataSource {
+object CupcakeData {
     val flavors = listOf(
         R.string.vanilla,
         R.string.chocolate,

@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.ui.dessert
 
 import androidx.lifecycle.ViewModel
-import com.hdy.compose_examples.data.source.DessertDataSource.dessertList
+import com.hdy.compose_examples.data.local.staticdata.DessertData.dessertList
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

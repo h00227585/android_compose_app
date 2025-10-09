@@ -1,9 +1,9 @@
-package com.hdy.compose_examples.data.source
+package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Affirmation
 
-object AffirmationDataSource {
+object AffirmationData {
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
             Affirmation(R.string.affirmation1, R.drawable.image1),
@@ -15,6 +15,7 @@ object AffirmationDataSource {
             Affirmation(R.string.affirmation7, R.drawable.image7),
             Affirmation(R.string.affirmation8, R.drawable.image8),
             Affirmation(R.string.affirmation9, R.drawable.image9),
-            Affirmation(R.string.affirmation10, R.drawable.image10))
+            Affirmation(R.string.affirmation10, R.drawable.image10)
+        )
     }
 }

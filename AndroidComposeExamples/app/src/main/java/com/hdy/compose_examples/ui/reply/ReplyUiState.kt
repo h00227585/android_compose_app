@@ -2,7 +2,7 @@ package com.hdy.compose_examples.ui.reply
 
 import com.hdy.compose_examples.data.model.Email
 import com.hdy.compose_examples.data.model.MailboxType
-import com.hdy.compose_examples.data.source.LocalEmailsDataProvider
+import com.hdy.compose_examples.data.local.staticdata.LocalEmailsDataProvider
 
 data class ReplyUiState(
     val mailboxes: Map<MailboxType, List<Email>> = emptyMap(),

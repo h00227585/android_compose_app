@@ -44,7 +44,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.Dog
-import com.hdy.compose_examples.data.source.DogDataSource
+import com.hdy.compose_examples.data.local.staticdata.DogData
 import com.hdy.compose_examples.ui.theme.WoofTheme
 
 //  DogHobby() 的可组合函数，用于接受狗狗的爱好字符串资源 ID 和可选的 Modifier。
@@ -71,7 +71,7 @@ fun MaterialScreen(
                 },
                 content = { it ->
                     LazyColumn(contentPadding = it) {
-                        items(DogDataSource.dogs) {
+                        items(DogData.dogs) {
                             DogItem(
                                 dog = it,
                                 modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))

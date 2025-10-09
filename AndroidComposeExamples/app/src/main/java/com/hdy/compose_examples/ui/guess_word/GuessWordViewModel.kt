@@ -4,7 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.hdy.compose_examples.data.source.WordDataSource
+import com.hdy.compose_examples.data.local.staticdata.WordData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -54,7 +54,7 @@ class GuessWordViewModel : ViewModel() {
         if (userGuess.equals(currentWord, ignoreCase = true)) {
             // User's guess is correct, increase the score
             // and call updateGameState() to prepare the game for next round
-            val updatedScore = _uiState.value.score.plus(WordDataSource.SCORE_INCREASE)
+            val updatedScore = _uiState.value.score.plus(WordData.SCORE_INCREASE)
             updateGameState(updatedScore)
         } else {
             // User's guess is wrong, show an error
@@ -80,7 +80,7 @@ class GuessWordViewModel : ViewModel() {
      * current game state.
      */
     private fun updateGameState(updatedScore: Int) {
-        if (usedWords.size == WordDataSource.MAX_NO_OF_WORDS){
+        if (usedWords.size == WordData.MAX_NO_OF_WORDS){
             //Last round in the game, update isGameOver to true, don't pick a new word
             _uiState.update { currentState ->
                 currentState.copy(
@@ -114,7 +114,7 @@ class GuessWordViewModel : ViewModel() {
 
     private fun pickRandomWordAndShuffle(): String {
         // Continue picking up a new random word until you get one that hasn't been used before
-        currentWord = WordDataSource.allWords.random()
+        currentWord = WordData.allWords.random()
         return if (usedWords.contains(currentWord)) {
             pickRandomWordAndShuffle()
         } else {
