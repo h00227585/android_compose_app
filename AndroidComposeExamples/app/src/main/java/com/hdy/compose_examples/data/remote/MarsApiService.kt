@@ -12,6 +12,8 @@ interface MarsApiService {
      * The @GET annotation indicates that the "photos" endpoint will be requested with the GET
      * HTTP method
      */
+
+    // 从 baseUrl 的 photos 子目录获取 json 格式的数据
     @GET("photos")
     suspend fun getPhotos(): List<MarsPhoto>
 }

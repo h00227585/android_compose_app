@@ -39,6 +39,15 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import com.hdy.compose_examples.R
 import com.hdy.compose_examples.data.model.MarsPhoto
+import com.hdy.compose_examples.data.remote.MarsApiService
+import com.hdy.compose_examples.data.repository.LocalMarsPhotosRepository
+import com.hdy.compose_examples.data.repository.NetworkMarsPhotosRepository
+import com.hdy.compose_examples.data.source.LocalMarsPhotosDataSource
+import com.hdy.compose_examples.domain.repository.MarsPhotosRepository
+import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
+import retrofit2.Retrofit
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,10 +60,42 @@ fun MarsPhotosScreen() {
         Surface(
             modifier = Modifier.fillMaxSize()
         ) {
-            val viewModelFactory = remember {
-                MarsViewModelFactory()
+            val useLocalMarsDataSource = true
+            val marsPhotosRepository: MarsPhotosRepository = if (useLocalMarsDataSource) {
+                // 本地数据源
+                // 必须使用 applicationContext，并且放在 remember 中
+                val context = LocalContext.current.applicationContext
+                remember {
+                    val localDataSource = LocalMarsPhotosDataSource(
+                        context = context,
+                        jsonFileName = "mars_photos.json"
+                    )
+                    LocalMarsPhotosRepository(localDataSource)
+                }
+            } else {
+                // 网络数据源
+                remember {
+                    val baseUrl = "https://android-kotlin-fun-mars-server.appspot.com/"
+                    // 创建 Retrofit 实例 (使用 remember)
+                    val retrofit = Retrofit.Builder()
+                        .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+                        .baseUrl(baseUrl)
+                        .build()
+                    // 创建 Service 实例
+                    val retrofitService = retrofit.create(MarsApiService::class.java)
+                    // 创建 Repository 实例
+                    NetworkMarsPhotosRepository(retrofitService)
+                }
             }
+
+            // Factory 只需要依赖于 Repository 即可，逻辑是通用的
+            val viewModelFactory = remember {
+                MarsViewModelFactory(marsPhotosRepository)
+            }
+
+            // 统一获取 ViewModel
             val marsViewModel: MarsViewModel = viewModel(factory = viewModelFactory)
+
             HomeScreen(
                 marsUiState = marsViewModel.marsUiState,
                 retryAction = marsViewModel::getMarsPhotos,

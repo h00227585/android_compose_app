@@ -11,34 +11,20 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 
-class MarsViewModelFactory : ViewModelProvider.Factory {
-    // 定义 Retrofit 依赖
-    private val baseUrl = "https://android-kotlin-fun-mars-server.appspot.com/"
-
-    private val retrofit: Retrofit by lazy {
-        Retrofit.Builder()
-            .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
-            .baseUrl(baseUrl)
-            .build()
-    }
-
-    // 定义 Retrofit Service 依赖
-    private val retrofitService: MarsApiService by lazy {
-        retrofit.create(MarsApiService::class.java)
-    }
-
-    // 定义 Repository 依赖
-    private val marsPhotosRepository: MarsPhotosRepository by lazy {
-        NetworkMarsPhotosRepository(retrofitService)
-    }
-
-    // ViewModel 实例化
-    override fun <T : ViewModel> create(modelClass: Class<T>, extras: CreationExtras): T {
+/**
+ * Factory for MarsViewModel.
+ * 它接受 MarsPhotosRepository 作为参数，并将其传递给 ViewModel 的构造函数。
+ */
+class MarsViewModelFactory(
+    private val marsPhotosRepository: MarsPhotosRepository
+) : ViewModelProvider.Factory {
+    // 确保泛型 T 是 ViewModel 的子类
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        // 检查请求创建的 ViewModel 是否是 MarsViewModel
         if (modelClass.isAssignableFrom(MarsViewModel::class.java)) {
-            // 在此将局部创建的 Repository 实例注入 ViewModel
-            return MarsViewModel(
-                marsPhotosRepository = this.marsPhotosRepository
-            ) as T
+            @Suppress("UNCHECKED_CAST")
+            // 构造 MarsViewModel 并返回
+            return MarsViewModel(marsPhotosRepository) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
