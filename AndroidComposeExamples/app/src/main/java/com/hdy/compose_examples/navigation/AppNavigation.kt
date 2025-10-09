@@ -16,6 +16,7 @@ import com.hdy.compose_examples.ui.guess_word.GuessWordScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
+import com.hdy.compose_examples.ui.mars_photos.MarsPhotosScreen
 import com.hdy.compose_examples.ui.material.MaterialScreen
 import com.hdy.compose_examples.ui.race_tracker.RaceTrackerScreen
 import com.hdy.compose_examples.ui.reply.ReplyScreen
@@ -45,6 +46,7 @@ object Routes {  // route: 与路线名称对应的字符串
     const val CUPCAKE = "cupcake"
     const val REPLY = "reply"
     const val RACE_TRACKER = "race_tracker"
+    const val MARS_PHOTOS = "mars_photos"
 }
 
 /**
@@ -165,6 +167,9 @@ fun AppNavigation(
         }
         composable(Routes.RACE_TRACKER) {
             RaceTrackerScreen ()
+        }
+        composable(Routes.MARS_PHOTOS) {
+            MarsPhotosScreen ()
         }
     }
 }

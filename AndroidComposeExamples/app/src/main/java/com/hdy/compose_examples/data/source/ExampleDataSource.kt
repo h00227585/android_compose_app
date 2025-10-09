@@ -140,13 +140,21 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "reply"
         ),
-        // 网络和协程
+        // 协程
         Example(
             id = "race_tracker",
             title = "RaceTracker",
-            description = "官方示例, 网络+协程",
+            description = "官方示例, 协程",
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "race_tracker"
+        ),
+        // 协程+网络
+        Example(
+            id = "mars_photos",
+            title = "MarsPhotos",
+            description = "官方示例, 协程+网络",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "mars_photos"
         ),
     )
 }

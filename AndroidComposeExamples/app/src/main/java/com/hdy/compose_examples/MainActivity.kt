@@ -13,20 +13,12 @@ import com.hdy.compose_examples.ui.theme.AndroidComposeExamplesTheme
 import com.hdy.compose_examples.util.Log
 
 class MainActivity : ComponentActivity() {
-    private val TAG = MainActivity::class.simpleName
+    private val TAG = MainActivity::class.java.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-//            AndroidComposeExamplesTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
-//            }
             AndroidComposeExamplesTheme {
                 // Surface 容器使用背景色
                 Surface(
@@ -70,19 +62,3 @@ class MainActivity : ComponentActivity() {
         Log.d(TAG, "onDestroy Called")
     }
 }
-
-//@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//}
-
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    AndroidComposeExamplesTheme {
-//        Greeting("Android")
-//    }
-//}
