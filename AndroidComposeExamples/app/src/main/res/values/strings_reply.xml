@@ -9,13 +9,10 @@
     <string name="tab_sent">Sent</string>
     <string name="tab_drafts">Drafts</string>
     <string name="tab_spam">Spam</string>
-    <string name="logo">Logo</string>
 
-    <string name="profile">Profile</string>
     <string name="reply">Reply</string>
     <string name="reply_all">Reply All</string>
     <string name="continue_composing">Continue Composing</string>
-    <string name="delete">Delete</string>
     <string name="move_to_inbox">Move to Inbox</string>
 
     <string name="account_1_first_name">Jeff</string>

@@ -1,6 +1,10 @@
 package com.hdy.compose_examples.navigation
 
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -16,6 +20,7 @@ import com.hdy.compose_examples.ui.guess_word.GuessWordScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
 import com.hdy.compose_examples.ui.home.ExampleListScreen
 import com.hdy.compose_examples.ui.image_gallery.ImageGalleryScreen
+import com.hdy.compose_examples.ui.inventory.navigation.InventoryNavGraph
 import com.hdy.compose_examples.ui.mars_photos.MarsPhotosScreen
 import com.hdy.compose_examples.ui.material.MaterialScreen
 import com.hdy.compose_examples.ui.race_tracker.RaceTrackerScreen
@@ -47,6 +52,7 @@ object Routes {  // route: 与路线名称对应的字符串
     const val REPLY = "reply"
     const val RACE_TRACKER = "race_tracker"
     const val MARS_PHOTOS = "mars_photos"
+    const val INVENTORY = "inventory"
 }
 
 /**
@@ -170,6 +176,13 @@ fun AppNavigation(
         }
         composable(Routes.MARS_PHOTOS) {
             MarsPhotosScreen ()
+        }
+        composable(Routes.INVENTORY) {
+            Surface(
+                modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
+            ) {
+                InventoryNavGraph(navController = rememberNavController())
+            }
         }
     }
 }

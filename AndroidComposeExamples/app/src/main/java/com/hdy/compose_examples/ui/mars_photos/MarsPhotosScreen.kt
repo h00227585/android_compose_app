@@ -130,7 +130,9 @@ private fun HomeScreen(
     when (marsUiState) {
         is MarsUiState.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
         is MarsUiState.Success -> PhotosGridScreen(
-            marsUiState.photos, contentPadding = contentPadding, modifier = modifier.fillMaxWidth()
+            marsUiState.photos,
+            contentPadding = contentPadding,
+            modifier = modifier.fillMaxWidth()
         )
         is MarsUiState.Error -> ErrorScreen(retryAction, modifier = modifier.fillMaxSize())
     }
@@ -177,11 +179,18 @@ fun PhotosGridScreen(
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
+    // 通过 LazyVerticalGrid，可以指定列表项的宽度，然后网格将适应尽可能多的列。
+    // 在计算列数之后，网格会在各列之间平均分配所有剩余的宽度。
+    // 这种自适应尺寸调整方式非常适合在不同尺寸的屏幕上显示多组列表项。
     LazyVerticalGrid(
         columns = GridCells.Adaptive(150.dp),
         modifier = modifier.padding(horizontal = 4.dp),
         contentPadding = contentPadding,
     ) {
+        // 当用户滚动网格（LazyColumn 中的 LazyRow）时，列表项的位置会发生变化。
+        // 不过，由于屏幕方向发生变化或者添加或移除了项，用户可能会丢失该行中的滚动位置。
+        // item key 可以帮助您根据键来保持滚动位置。
+        // 通过提供item key，您可以帮助 Compose 正确处理重新排序。
         items(items = photos, key = { photo -> photo.id }) { photo ->
             MarsPhotoCard(
                 photo,
@@ -194,6 +203,7 @@ fun PhotosGridScreen(
     }
 }
 
+// AsyncImage 周围添加一个 elevation=8dp 的 card
 @Composable
 fun MarsPhotoCard(photo: MarsPhoto, modifier: Modifier = Modifier) {
     Card(
@@ -201,6 +211,8 @@ fun MarsPhotoCard(photo: MarsPhoto, modifier: Modifier = Modifier) {
         shape = MaterialTheme.shapes.medium,
         elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
+        // AsyncImage: 异步请求图片
+        // crossfade(true): 请求成功完成时启用淡入淡出动画
         AsyncImage(
             model = ImageRequest.Builder(context = LocalContext.current).data(photo.imgSrc)
                 .crossfade(true).build(),

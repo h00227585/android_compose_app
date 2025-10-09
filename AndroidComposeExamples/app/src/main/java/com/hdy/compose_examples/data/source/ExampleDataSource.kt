@@ -156,5 +156,13 @@ object ExampleDataSource {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "mars_photos"
         ),
+        // Room
+        Example(
+            id = "inventory",
+            title = "商品",
+            description = "官方示例, Room+手动依赖注入",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "inventory"
+        ),
     )
 }

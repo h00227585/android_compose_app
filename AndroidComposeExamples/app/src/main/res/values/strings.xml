@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">ComposeExamples</string>
 
+    <string name="attention">Attention</string>
+    <string name="back_button">Back</string>
+    <string name="delete">Delete</string>
+    <string name="logo">Logo</string>
+    <string name="profile">Profile</string>
+    <string name="price">Price</string>
+    <string name="sell">Sell</string>
+    <string name="save_action">Save</string>
+
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
     <string name="happy_birthday_text">Happy Birthday Sam!</string>
     <string name="signature_text">From Emma</string>
 
@@ -105,7 +117,6 @@
     <string name="total_price">Total %s</string>
     <string name="new_cupcake_order">New Cupcake Order</string>
     <string name="order_details">Quantity: %1$s \nFlavor: %2$s \nPickup date: %3$s \nTotal: %4$s \n\nThank you!</string>
-    <string name="back_button">Back</string>
     <plurals name="cupcakes">
         <item quantity="one">%d cupcake</item>
         <item quantity="other">%d cupcakes</item>

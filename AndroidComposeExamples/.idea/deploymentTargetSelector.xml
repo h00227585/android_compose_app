@@ -16,9 +16,6 @@
       <SelectionState runConfigName="CupcakeScreenTest">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="CupcakeOrderScreenTest">
-        <option name="selectionMode" value="DROPDOWN" />
-      </SelectionState>
       <SelectionState runConfigName="cupcakeNavHost_clickBackOnFlavorScreen_navigatesToStartOrderScreen()">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
