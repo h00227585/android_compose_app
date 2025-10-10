@@ -96,6 +96,9 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:${room_version}")
 
+    // datastore-preferences
+    implementation("androidx.datastore:datastore-preferences:1.1.7")
+
     // compose扩展库
 //    implementation("com.google.accompanist:accompanist-permissions:0.37.3")
 

@@ -15,6 +15,7 @@ import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
 import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
 import com.hdy.compose_examples.ui.cupcake.CupcakeScreen
 import com.hdy.compose_examples.ui.dessert.DessertScreen
+import com.hdy.compose_examples.ui.dessert_release.DessertReleaseScreen
 import com.hdy.compose_examples.ui.dice_roller.DiceRollerScreen
 import com.hdy.compose_examples.ui.guess_word.GuessWordScreen
 import com.hdy.compose_examples.ui.hexagon.HexagonScreen
@@ -53,6 +54,7 @@ object Routes {  // route: 与路线名称对应的字符串
     const val RACE_TRACKER = "race_tracker"
     const val MARS_PHOTOS = "mars_photos"
     const val INVENTORY = "inventory"
+    const val DESSERT_RELEASE = "dessert_release"
 }
 
 /**
@@ -183,6 +185,9 @@ fun AppNavigation(
             ) {
                 InventoryNavGraph(navController = rememberNavController())
             }
+        }
+        composable(Routes.DESSERT_RELEASE) {
+            DessertReleaseScreen()
         }
     }
 }

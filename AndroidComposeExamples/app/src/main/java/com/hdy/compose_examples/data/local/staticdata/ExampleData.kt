@@ -163,5 +163,13 @@ object ExampleData {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "inventory"
         ),
+        // datastore-preferences
+        Example(
+            id = "dessert_release",
+            title = "Android Dessert Release",
+            description = "官方示例, DataStore-Preferences",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "dessert_release"
+        ),
     )
 }
