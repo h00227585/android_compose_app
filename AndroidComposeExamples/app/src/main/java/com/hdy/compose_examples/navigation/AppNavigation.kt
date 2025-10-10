@@ -12,6 +12,7 @@ import androidx.navigation.compose.rememberNavController
 import com.hdy.compose_examples.ui.affirmations.AffirmationScreen
 import com.hdy.compose_examples.ui.art_space.ArtSpaceScreen
 import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
+import com.hdy.compose_examples.ui.blur.BlurScreen
 import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
 import com.hdy.compose_examples.ui.cupcake.CupcakeScreen
 import com.hdy.compose_examples.ui.dessert.DessertScreen
@@ -55,6 +56,7 @@ object Routes {  // route: 与路线名称对应的字符串
     const val MARS_PHOTOS = "mars_photos"
     const val INVENTORY = "inventory"
     const val DESSERT_RELEASE = "dessert_release"
+    const val BLUR = "blur"
 }
 
 /**
@@ -181,13 +183,21 @@ fun AppNavigation(
         }
         composable(Routes.INVENTORY) {
             Surface(
-                modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.background
             ) {
                 InventoryNavGraph(navController = rememberNavController())
             }
         }
         composable(Routes.DESSERT_RELEASE) {
             DessertReleaseScreen()
+        }
+        composable(Routes.BLUR) {
+            Surface(
+                modifier = Modifier.fillMaxSize()
+            ) {
+                BlurScreen()
+            }
         }
     }
 }

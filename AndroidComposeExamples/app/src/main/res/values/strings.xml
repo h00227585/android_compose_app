@@ -13,6 +13,10 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
 
+    <string name="pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
+
     <!-- birthday card -->
     <string name="happy_birthday_text">Happy Birthday Sam!</string>
     <string name="signature_text">From Emma</string>

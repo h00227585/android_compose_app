@@ -2,7 +2,9 @@ package com.hdy.compose_examples.di
 
 import android.content.Context
 import com.hdy.compose_examples.data.local.db.InventoryDatabase
+import com.hdy.compose_examples.data.repository.BlurRepositoryImpl
 import com.hdy.compose_examples.data.repository.OfflineItemsRepository
+import com.hdy.compose_examples.domain.repository.BlurRepository
 import com.hdy.compose_examples.domain.repository.ItemsRepository
 
 /**
@@ -10,6 +12,7 @@ import com.hdy.compose_examples.domain.repository.ItemsRepository
  */
 interface AppContainer {
     val itemsRepository: ItemsRepository
+    val blurRepository: BlurRepository
 }
 
 /**
@@ -22,4 +25,6 @@ class AppDataContainer(private val context: Context) : AppContainer {
     override val itemsRepository: ItemsRepository by lazy {
         OfflineItemsRepository(InventoryDatabase.getDatabase(context).itemDao())
     }
+
+    override val blurRepository = BlurRepositoryImpl(context)
 }

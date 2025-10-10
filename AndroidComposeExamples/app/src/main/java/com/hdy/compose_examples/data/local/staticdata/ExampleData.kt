@@ -171,5 +171,13 @@ object ExampleData {
             icon = IconSource.Resource(R.drawable.ic_mood),
             route = "dessert_release"
         ),
+        // WorkManager
+        Example(
+            id = "blur",
+            title = "Blur",
+            description = "官方示例, WorkManager",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "blur"
+        ),
     )
 }

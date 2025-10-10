@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.util.extensions
+package com.hdy.compose_examples.utils.extensions
 
 import com.hdy.compose_examples.data.local.db.entity.Item
 import com.hdy.compose_examples.data.local.db.model.ItemDetails

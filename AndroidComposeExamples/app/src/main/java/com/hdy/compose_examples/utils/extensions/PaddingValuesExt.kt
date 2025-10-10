@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.util.extensions
+package com.hdy.compose_examples.utils.extensions
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.calculateEndPadding

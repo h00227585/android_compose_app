@@ -2,7 +2,7 @@ package com.hdy.compose_examples.data.local.file
 
 import android.content.Context
 import com.hdy.compose_examples.data.model.MarsPhoto
-import com.hdy.compose_examples.util.Log
+import com.hdy.compose_examples.utils.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerializationException

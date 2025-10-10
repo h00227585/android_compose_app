@@ -10,7 +10,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.hdy.compose_examples.navigation.AppNavigation
 import com.hdy.compose_examples.ui.theme.AndroidComposeExamplesTheme
-import com.hdy.compose_examples.util.Log
+import com.hdy.compose_examples.utils.Log
 
 class MainActivity : ComponentActivity() {
     private val TAG = MainActivity::class.java.simpleName

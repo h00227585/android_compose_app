@@ -9,7 +9,7 @@ import android.provider.MediaStore
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.hdy.compose_examples.data.model.LocalImage
-import com.hdy.compose_examples.util.Log
+import com.hdy.compose_examples.utils.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

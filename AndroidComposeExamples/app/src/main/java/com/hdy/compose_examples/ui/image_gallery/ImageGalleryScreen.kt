@@ -30,7 +30,7 @@ import com.hdy.compose_examples.data.repository.ImageRepository
 import com.hdy.compose_examples.ui.components.EmptyContent
 import com.hdy.compose_examples.ui.components.ErrorContent
 import com.hdy.compose_examples.ui.components.ImageGrid
-import com.hdy.compose_examples.util.Log
+import com.hdy.compose_examples.utils.Log
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

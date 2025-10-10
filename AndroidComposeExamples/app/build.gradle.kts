@@ -99,6 +99,9 @@ dependencies {
     // datastore-preferences
     implementation("androidx.datastore:datastore-preferences:1.1.7")
 
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.8.1")
+
     // compose扩展库
 //    implementation("com.google.accompanist:accompanist-permissions:0.37.3")
 

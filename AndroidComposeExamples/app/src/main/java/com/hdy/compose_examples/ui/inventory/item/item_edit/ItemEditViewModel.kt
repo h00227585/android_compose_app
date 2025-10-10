@@ -10,8 +10,8 @@ import com.hdy.compose_examples.data.local.db.model.ItemDetails
 import com.hdy.compose_examples.domain.repository.ItemsRepository
 import com.hdy.compose_examples.ui.inventory.item.ItemUiState
 import com.hdy.compose_examples.ui.inventory.navigation.ItemEditDestination
-import com.hdy.compose_examples.util.extensions.toItem
-import com.hdy.compose_examples.util.extensions.toItemUiState
+import com.hdy.compose_examples.utils.extensions.toItem
+import com.hdy.compose_examples.utils.extensions.toItemUiState
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch

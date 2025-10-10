@@ -43,7 +43,7 @@ import com.hdy.compose_examples.data.local.db.entity.Item
 import com.hdy.compose_examples.di.AppViewModelProvider
 import com.hdy.compose_examples.ui.inventory.components.InventoryTopAppBar
 import com.hdy.compose_examples.ui.inventory.navigation.InventoryDestination
-import com.hdy.compose_examples.util.extensions.formatedPrice
+import com.hdy.compose_examples.utils.extensions.formatedPrice
 
 
 /**

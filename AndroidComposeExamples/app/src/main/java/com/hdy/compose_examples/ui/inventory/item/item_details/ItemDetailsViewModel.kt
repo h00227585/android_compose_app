@@ -5,8 +5,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hdy.compose_examples.domain.repository.ItemsRepository
 import com.hdy.compose_examples.ui.inventory.navigation.ItemDetailsDestination
-import com.hdy.compose_examples.util.extensions.toItem
-import com.hdy.compose_examples.util.extensions.toItemDetails
+import com.hdy.compose_examples.utils.extensions.toItem
+import com.hdy.compose_examples.utils.extensions.toItemDetails
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.filterNotNull

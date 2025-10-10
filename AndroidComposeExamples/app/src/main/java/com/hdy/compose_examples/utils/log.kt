@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.util
+package com.hdy.compose_examples.utils
 
 import android.util.Log
 

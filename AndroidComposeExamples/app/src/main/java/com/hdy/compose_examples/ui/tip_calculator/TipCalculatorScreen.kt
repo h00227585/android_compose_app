@@ -43,7 +43,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.util.extensions.setHorizontal
+import com.hdy.compose_examples.utils.extensions.setHorizontal
 import java.text.NumberFormat
 
 @OptIn(ExperimentalMaterial3Api::class)
