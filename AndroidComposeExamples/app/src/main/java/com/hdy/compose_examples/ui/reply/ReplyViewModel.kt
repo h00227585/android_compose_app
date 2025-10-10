@@ -1,8 +1,8 @@
 package com.hdy.compose_examples.ui.reply
 
 import androidx.lifecycle.ViewModel
-import com.hdy.compose_examples.data.model.Email
-import com.hdy.compose_examples.data.model.MailboxType
+import com.hdy.compose_examples.data.local.staticdata.model.Email
+import com.hdy.compose_examples.data.local.staticdata.model.MailboxType
 import com.hdy.compose_examples.data.local.staticdata.LocalEmailsDataProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

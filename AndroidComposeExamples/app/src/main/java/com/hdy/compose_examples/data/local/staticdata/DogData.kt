@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Dog
+import com.hdy.compose_examples.data.local.staticdata.model.Dog
 
 object DogData {
     val dogs = listOf(

@@ -1,11 +1,11 @@
-package com.hdy.compose_examples.data.local.database
+package com.hdy.compose_examples.data.local.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.hdy.compose_examples.data.local.dao.ItemDao
-import com.hdy.compose_examples.data.local.entity.Item
+import com.hdy.compose_examples.data.local.db.dao.ItemDao
+import com.hdy.compose_examples.data.local.db.entity.Item
 
 /**
  * Database class with a singleton Instance object.

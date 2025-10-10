@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.data.model
+package com.hdy.compose_examples.data.local.staticdata.model
 
 data class Artwork(
     val imageRes: Int,

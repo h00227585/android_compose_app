@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hdy.compose_examples.data.model.ItemDetails
+import com.hdy.compose_examples.data.local.db.model.ItemDetails
 import com.hdy.compose_examples.domain.repository.ItemsRepository
 import com.hdy.compose_examples.ui.inventory.item.ItemUiState
 import com.hdy.compose_examples.ui.inventory.navigation.ItemEditDestination

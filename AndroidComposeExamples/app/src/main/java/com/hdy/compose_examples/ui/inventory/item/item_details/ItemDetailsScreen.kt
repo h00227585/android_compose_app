@@ -42,7 +42,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.local.entity.Item
+import com.hdy.compose_examples.data.local.db.entity.Item
 import com.hdy.compose_examples.di.AppViewModelProvider
 import com.hdy.compose_examples.ui.inventory.components.InventoryTopAppBar
 import com.hdy.compose_examples.ui.inventory.navigation.ItemDetailsDestination

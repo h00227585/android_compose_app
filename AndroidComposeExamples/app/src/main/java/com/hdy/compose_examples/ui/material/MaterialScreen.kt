@@ -43,7 +43,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Dog
+import com.hdy.compose_examples.data.local.staticdata.model.Dog
 import com.hdy.compose_examples.data.local.staticdata.DogData
 import com.hdy.compose_examples.ui.theme.WoofTheme
 

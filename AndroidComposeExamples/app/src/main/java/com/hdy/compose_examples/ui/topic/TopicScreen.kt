@@ -32,7 +32,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Topic
+import com.hdy.compose_examples.data.local.staticdata.model.Topic
 import com.hdy.compose_examples.data.local.staticdata.TopicData
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -1,6 +1,6 @@
 package com.hdy.compose_examples.domain.repository
 
-import com.hdy.compose_examples.data.local.entity.Item
+import com.hdy.compose_examples.data.local.db.entity.Item
 import kotlinx.coroutines.flow.Flow
 
 /**

@@ -1,8 +1,7 @@
-package com.hdy.compose_examples.data.model
+package com.hdy.compose_examples.data.local.staticdata.model
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.hdy.compose_examples.R
 
 /**
  * A data class to represent the information presented in the dog card

@@ -42,7 +42,7 @@ import com.hdy.compose_examples.data.model.MarsPhoto
 import com.hdy.compose_examples.data.remote.MarsApiService
 import com.hdy.compose_examples.data.repository.LocalMarsPhotosRepository
 import com.hdy.compose_examples.data.repository.NetworkMarsPhotosRepository
-import com.hdy.compose_examples.data.local.staticdata.LocalMarsPhotosData
+import com.hdy.compose_examples.data.local.file.LocalMarsPhotosData
 import com.hdy.compose_examples.domain.repository.MarsPhotosRepository
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.json.Json

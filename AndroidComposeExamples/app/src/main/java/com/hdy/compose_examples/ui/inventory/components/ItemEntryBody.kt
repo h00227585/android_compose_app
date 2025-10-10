@@ -16,7 +16,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.ItemDetails
+import com.hdy.compose_examples.data.local.db.model.ItemDetails
 import com.hdy.compose_examples.ui.inventory.item.ItemUiState
 import java.util.Currency
 import java.util.Locale

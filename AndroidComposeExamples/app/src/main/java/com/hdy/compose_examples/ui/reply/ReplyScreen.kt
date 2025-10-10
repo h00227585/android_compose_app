@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.hdy.compose_examples.data.model.Email
-import com.hdy.compose_examples.data.model.MailboxType
+import com.hdy.compose_examples.data.local.staticdata.model.Email
+import com.hdy.compose_examples.data.local.staticdata.model.MailboxType
 import com.hdy.compose_examples.ui.reply.util.ReplyNavigationType
 import com.hdy.compose_examples.ui.theme.AndroidComposeExamplesTheme
 

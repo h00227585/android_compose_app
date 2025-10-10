@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.data.local.dao
+package com.hdy.compose_examples.data.local.db.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.hdy.compose_examples.data.local.entity.Item
+import com.hdy.compose_examples.data.local.db.entity.Item
 import kotlinx.coroutines.flow.Flow
 
 /**

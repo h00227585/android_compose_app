@@ -1,8 +1,7 @@
-package com.hdy.compose_examples.data.model
+package com.hdy.compose_examples.data.local.staticdata.model
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-
 
 data class Account(
     /** Unique ID of a user **/

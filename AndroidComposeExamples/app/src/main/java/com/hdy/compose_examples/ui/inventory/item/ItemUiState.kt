@@ -1,6 +1,6 @@
 package com.hdy.compose_examples.ui.inventory.item
 
-import com.hdy.compose_examples.data.model.ItemDetails
+import com.hdy.compose_examples.data.local.db.model.ItemDetails
 
 /**
  * Represents Ui State for an Item.

@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.data.repository
 
-import com.hdy.compose_examples.data.local.dao.ItemDao
-import com.hdy.compose_examples.data.local.entity.Item
+import com.hdy.compose_examples.data.local.db.dao.ItemDao
+import com.hdy.compose_examples.data.local.db.entity.Item
 import com.hdy.compose_examples.domain.repository.ItemsRepository
 import kotlinx.coroutines.flow.Flow
 

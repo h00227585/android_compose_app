@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.util.extensions
 
-import com.hdy.compose_examples.data.local.entity.Item
-import com.hdy.compose_examples.data.model.ItemDetails
+import com.hdy.compose_examples.data.local.db.entity.Item
+import com.hdy.compose_examples.data.local.db.model.ItemDetails
 import com.hdy.compose_examples.ui.inventory.item.ItemUiState
 import java.text.NumberFormat
 

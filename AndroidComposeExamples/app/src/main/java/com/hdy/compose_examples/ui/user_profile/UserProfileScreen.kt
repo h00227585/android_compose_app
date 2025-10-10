@@ -34,7 +34,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.hdy.compose_examples.data.model.UserProfile
+import com.hdy.compose_examples.data.local.staticdata.model.UserProfile
 
 
 @OptIn(ExperimentalMaterial3Api::class)

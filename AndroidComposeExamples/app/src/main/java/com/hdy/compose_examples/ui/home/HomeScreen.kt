@@ -26,9 +26,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.hdy.compose_examples.data.model.Example
-import com.hdy.compose_examples.data.model.IconSource
+import com.hdy.compose_examples.data.local.staticdata.model.Example
 import com.hdy.compose_examples.data.local.staticdata.ExampleData
+import com.hdy.compose_examples.data.model.IconSource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

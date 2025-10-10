@@ -32,7 +32,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Email
+import com.hdy.compose_examples.data.local.staticdata.model.Email
 import com.hdy.compose_examples.data.local.staticdata.LocalAccountsDataProvider
 
 // 邮件列表, 包括 topbar

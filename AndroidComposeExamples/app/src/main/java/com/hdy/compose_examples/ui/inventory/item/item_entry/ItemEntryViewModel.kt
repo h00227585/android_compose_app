@@ -4,7 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.hdy.compose_examples.data.model.ItemDetails
+import com.hdy.compose_examples.data.local.db.model.ItemDetails
 import com.hdy.compose_examples.domain.repository.ItemsRepository
 import com.hdy.compose_examples.ui.inventory.item.ItemUiState
 import com.hdy.compose_examples.util.extensions.toItem

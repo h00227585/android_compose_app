@@ -38,8 +38,8 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Email
-import com.hdy.compose_examples.data.model.MailboxType
+import com.hdy.compose_examples.data.local.staticdata.model.Email
+import com.hdy.compose_examples.data.local.staticdata.model.MailboxType
 import com.hdy.compose_examples.data.local.staticdata.LocalAccountsDataProvider
 import com.hdy.compose_examples.ui.reply.util.ReplyNavigationType
 

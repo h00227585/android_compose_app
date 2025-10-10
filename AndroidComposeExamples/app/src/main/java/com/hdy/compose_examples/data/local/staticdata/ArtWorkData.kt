@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Artwork
+import com.hdy.compose_examples.data.local.staticdata.model.Artwork
 
 object ArtWorkData {
     val artworks = listOf(

@@ -25,7 +25,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.hdy.compose_examples.data.model.Affirmation
+import com.hdy.compose_examples.data.local.staticdata.model.Affirmation
 import com.hdy.compose_examples.data.local.staticdata.AffirmationData
 
 @OptIn(ExperimentalMaterial3Api::class)

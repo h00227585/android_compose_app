@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.ui.user_profile
 
 import androidx.lifecycle.ViewModel
-import com.hdy.compose_examples.data.model.UserProfile
+import com.hdy.compose_examples.data.local.staticdata.model.UserProfile
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

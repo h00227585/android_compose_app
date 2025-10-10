@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.data.model
+package com.hdy.compose_examples.data.local.db.model
 
 data class ItemDetails(
     val id: Int = 0,

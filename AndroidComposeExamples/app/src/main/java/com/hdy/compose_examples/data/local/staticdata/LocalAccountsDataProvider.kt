@@ -1,7 +1,7 @@
 package com.hdy.compose_examples.data.local.staticdata
 
 import com.hdy.compose_examples.R
-import com.hdy.compose_examples.data.model.Account
+import com.hdy.compose_examples.data.local.staticdata.model.Account
 
 object LocalAccountsDataProvider {
     val defaultAccount = Account(-1, -1, -1, -1, R.drawable.avatar_1)
