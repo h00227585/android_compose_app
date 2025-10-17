@@ -10,6 +10,13 @@ import com.hdy.compose_examples.data.model.IconSource
 object ExampleData {
     val examples = listOf(
         Example(
+            id = "basic",
+            title = "Compose基础",
+            description = "",
+            icon = IconSource.Resource(R.drawable.ic_mood),
+            route = "basic"
+        ),
+        Example(
             id = "task_list",
             title = "任务列表",
             description = "动态列表管理，展示添加、删除和状态管理",

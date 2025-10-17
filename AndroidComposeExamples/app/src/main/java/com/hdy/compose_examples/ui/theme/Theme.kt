@@ -37,6 +37,7 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+// 自动调整主题
 @Composable
 fun AndroidComposeExamplesTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.hdy.compose_examples.ui.affirmations.AffirmationScreen
 import com.hdy.compose_examples.ui.art_space.ArtSpaceScreen
+import com.hdy.compose_examples.ui.basic.BasicScreen
 import com.hdy.compose_examples.ui.birthday_card.BirthdayCardScreen
 import com.hdy.compose_examples.ui.blur.BlurScreen
 import com.hdy.compose_examples.ui.business_card.BusinessCardScreen
@@ -35,6 +36,7 @@ import com.hdy.compose_examples.ui.user_profile.UserProfileScreen
 
 object Routes {  // route: 与路线名称对应的字符串
     const val HOME = "home"
+    const val BASIC = "basic"
     const val TASK_LIST = "task_list"
     const val USER_PROFILE = "user_profile"
     const val HEXAGON = "hexagon"
@@ -76,6 +78,13 @@ fun AppNavigation(
                 onExampleClick = { route ->
                     navController.navigate(route)
                 }
+            )
+        }
+
+        // 基础
+        composable(Routes.BASIC) {
+            BasicScreen(
+                onBackClick = { navController.navigateUp() }
             )
         }
 
