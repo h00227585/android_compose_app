@@ -150,6 +150,31 @@ fun BasicScreen(
 private fun BodyContent(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
         item {
+            ConstraintLayout1()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            ConstraintLayout2()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            ConstraintLayout3()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            ConstraintLayout4()
+        }
+
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
             TextDemo()
         }
 
@@ -195,6 +220,13 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 thickness = 2.dp,
                 color = (MaterialTheme.colorScheme.primary))
             CustomLayout2()
+        }
+
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            CustomLayout3()
         }
     }
 }
