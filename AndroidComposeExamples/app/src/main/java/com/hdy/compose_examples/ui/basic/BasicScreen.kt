@@ -47,6 +47,8 @@ import com.hdy.compose_examples.ui.basic.layout.List1
 import com.hdy.compose_examples.ui.basic.layout.List2
 import com.hdy.compose_examples.ui.basic.layout.List3
 import com.hdy.compose_examples.ui.basic.layout.StdLayout
+import com.hdy.compose_examples.ui.basic.state.State1
+import com.hdy.compose_examples.ui.basic.state.State2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -159,6 +161,21 @@ fun BasicScreen(
 @Composable
 private fun BodyContent(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
+        // state
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            State1()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            State2()
+        }
+
+
         // Intrinsics
         item {
             HorizontalDivider(

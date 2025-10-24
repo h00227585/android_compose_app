@@ -10,9 +10,9 @@ data class Email(
     /** Recipient(s) of the email **/
     val recipients: List<Account> = emptyList(),
     /** Title of the email **/
-    @StringRes val subject: Int = -1,
+    @field:StringRes val subject: Int = -1,
     /** Content of the email **/
-    @StringRes val body: Int = -1,
+    @field:StringRes val body: Int = -1,
     /** Which mailbox it is in **/
     var mailbox: MailboxType = MailboxType.Inbox,
     /**
@@ -20,5 +20,5 @@ data class Email(
      * It should be calculated from relative time in the future.
      * For now it's hard coded to a [String] value.
      */
-    @StringRes var createdAt: Int = -1
+    @field:StringRes var createdAt: Int = -1
 )
