@@ -149,7 +149,26 @@ fun BasicScreen(
 @Composable
 private fun BodyContent(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
+        // Intrinsics
         item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Intrinsics1()
+        }
+
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Intrinsics2()
+        }
+
+        // 约束布局
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
             ConstraintLayout1()
         }
         item {
@@ -171,13 +190,27 @@ private fun BodyContent(modifier: Modifier = Modifier) {
             ConstraintLayout4()
         }
 
+        // 自定义布局
         item {
             HorizontalDivider(
                 thickness = 2.dp,
                 color = (MaterialTheme.colorScheme.primary))
-            TextDemo()
+            CustomLayout1()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            CustomLayout2()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            CustomLayout3()
         }
 
+        // list
         item {
             HorizontalDivider(
                 thickness = 2.dp,
@@ -187,7 +220,6 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 .padding(6.dp)
                 .border(width = 2.dp, color = MaterialTheme.colorScheme.secondary))
         }
-
         item {
             HorizontalDivider(
                 thickness = 2.dp,
@@ -197,7 +229,6 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 .padding(6.dp)
                 .border(width = 2.dp, color = MaterialTheme.colorScheme.secondary))
         }
-
         item {
             HorizontalDivider(
                 thickness = 2.dp,
@@ -208,25 +239,12 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 .border(width = 2.dp, color = MaterialTheme.colorScheme.secondary))
         }
 
+        // 文本
         item {
             HorizontalDivider(
                 thickness = 2.dp,
                 color = (MaterialTheme.colorScheme.primary))
-            CustomLayout1()
-        }
-
-        item {
-            HorizontalDivider(
-                thickness = 2.dp,
-                color = (MaterialTheme.colorScheme.primary))
-            CustomLayout2()
-        }
-
-        item {
-            HorizontalDivider(
-                thickness = 2.dp,
-                color = (MaterialTheme.colorScheme.primary))
-            CustomLayout3()
+            TextDemo()
         }
     }
 }
