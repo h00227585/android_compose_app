@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.basic
+package com.hdy.compose_examples.ui.basic.layout
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text

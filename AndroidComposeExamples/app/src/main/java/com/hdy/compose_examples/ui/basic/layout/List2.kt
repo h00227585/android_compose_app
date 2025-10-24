@@ -1,7 +1,6 @@
-package com.hdy.compose_examples.ui.basic
+package com.hdy.compose_examples.ui.basic.layout
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

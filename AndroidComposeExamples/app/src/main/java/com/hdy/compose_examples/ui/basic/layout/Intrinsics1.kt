@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.basic
+package com.hdy.compose_examples.ui.basic.layout
 
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row

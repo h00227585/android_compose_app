@@ -1,4 +1,4 @@
-package com.hdy.compose_examples.ui.basic
+package com.hdy.compose_examples.ui.basic.layout
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
