@@ -39,12 +39,14 @@ fun State2(helloViewModel: HelloViewModel = viewModel()) {
 }
 
 class HelloViewModel: ViewModel() {
+    private val hello = "Hello"
+
     // 用于保存当前的 TextField 输入内容
-    private val _currentInput = MutableLiveData<String>("")
+    private val _currentInput = MutableLiveData("")
     val currentInput: LiveData<String> = _currentInput
 
     // 用于保存所有已输入的、不为空的内容（以逗号分隔）
-    private val _displayedContent = MutableLiveData<String>("Hello")
+    private val _displayedContent = MutableLiveData(hello)
     val displayedContent: LiveData<String> = _displayedContent
 
     fun onContentChanged(newContent: String) {
@@ -55,19 +57,10 @@ class HelloViewModel: ViewModel() {
     private fun updateDisplayedContent(newInput: String) {
         // 只有当输入不为空时才追加
         if (newInput.isNotBlank()) {
-            // 获取当前的显示内容，并追加新的输入内容
-            val currentBaseText = _displayedContent.value ?: "Hello"
-
-            // 检查是否已经包含这个输入（防止重复追加，可以根据你的需求调整逻辑）
-            // 这里我们假设只有当输入变化时才追加，并且如果上一个显示内容已经包含新的输入，则不追加。
-            // 更好的做法是：基础文本 + "," + 新的输入，但你需要决定如何处理已有的输入。
-            // 按照你的要求 "text的显示内容是增加", {textarea} 的内容"：
-            // 我们将“Hello”作为初始内容，之后每次输入非空内容就追加到末尾。
-
-            val newDisplayedText = "Hello, $newInput"
+            val newDisplayedText = "$hello, $newInput"
             _displayedContent.value = newDisplayedText
         } else {
-            _displayedContent.value = "Hello"
+            _displayedContent.value = hello
         }
         // 如果输入为空，我们保持 _displayedContent 不变，或者根据需求重置。
         // 这里我们选择保持不变，除非你希望输入为空时移除最后一个追加的内容。
