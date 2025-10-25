@@ -50,6 +50,7 @@ import com.hdy.compose_examples.ui.basic.layout.StdLayout
 import com.hdy.compose_examples.ui.basic.state.State1
 import com.hdy.compose_examples.ui.basic.state.State2
 import com.hdy.compose_examples.ui.basic.state.State3
+import com.hdy.compose_examples.ui.basic.state.State4
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -181,7 +182,12 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 color = (MaterialTheme.colorScheme.primary))
             State3()
         }
-
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            State4()
+        }
 
         // Intrinsics
         item {

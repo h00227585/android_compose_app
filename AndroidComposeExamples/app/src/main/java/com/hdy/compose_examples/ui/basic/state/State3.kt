@@ -12,11 +12,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -24,6 +26,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlin.random.Random
 
 // 状态提升+单向数据流: 将状态放到viewmodel
+// remember: 保存重组时不需要改变的内部状态。
 
 @Composable
 fun State3(
@@ -54,7 +57,7 @@ private fun TodoList(
         LazyColumn(
             contentPadding = PaddingValues(8.dp, 12.dp)
         ) {
-            items(todoList) {
+            items(items = todoList) {
                 TodoRow(
                     todoItem = it,
                     onItemClick = onItemRemove)
@@ -89,9 +92,16 @@ private fun TodoRow(
         Text(
             text = todoItem.task
         )
+
+        // TODO:
+        // add的时候是正确的，
+        // remove的时候是错误的，透明度发生了改变。
+        val iconAlpha: Float = remember(todoItem.id) { Random.nextFloat().coerceIn(0.3f, 0.9f) }
+
         Icon(
             imageVector = todoItem.icon.imageVector,
-            contentDescription = stringResource(id = todoItem.icon.res)
+            contentDescription = stringResource(id = todoItem.icon.description),
+            tint = LocalContentColor.current.copy(alpha = iconAlpha)
         )
     }
 }

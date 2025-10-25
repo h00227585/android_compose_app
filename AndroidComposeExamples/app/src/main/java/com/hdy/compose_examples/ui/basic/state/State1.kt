@@ -65,7 +65,7 @@ private fun TodoRow(
         )
         Icon(
             imageVector = todoItem.icon.imageVector,
-            contentDescription = stringResource(id = todoItem.icon.res)
+            contentDescription = stringResource(id = todoItem.icon.description)
         )
     }
 }

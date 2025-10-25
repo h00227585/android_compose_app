@@ -12,7 +12,7 @@ import com.hdy.compose_examples.R
 
 enum class TodoIcon(
     val imageVector: ImageVector,
-    @field:StringRes val res: Int
+    @field:StringRes val description: Int
 ) {
     Expand(Icons.Default.CropSquare, R.string.expand),
     Done(Icons.Default.Done, R.string.done),
