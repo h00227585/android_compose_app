@@ -62,8 +62,6 @@ class HelloViewModel: ViewModel() {
         } else {
             _displayedContent.value = hello
         }
-        // 如果输入为空，我们保持 _displayedContent 不变，或者根据需求重置。
-        // 这里我们选择保持不变，除非你希望输入为空时移除最后一个追加的内容。
     }
 }
 

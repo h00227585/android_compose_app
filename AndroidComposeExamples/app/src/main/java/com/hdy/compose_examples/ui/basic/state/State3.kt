@@ -1,5 +1,6 @@
 package com.hdy.compose_examples.ui.basic.state
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -13,19 +14,40 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlin.random.Random
 
-// 无状态的静态页面
+// 状态提升+单向数据流: 将状态放到viewmodel
 
 @Composable
-fun State1() {
-    TodoList(TodoData.data)
+fun State3(
+    todoViewModel: TodoViewModel = viewModel(),
+    initData: List<TodoItem> = TodoData.data
+) {
+    val todoItems: List<TodoItem> by todoViewModel.todoItems.observeAsState(emptyList())
+
+    // 副作用：初始化加载用户数据，只执行一次
+    LaunchedEffect(initData) {
+        todoViewModel.initialize(initData)
+    }
+
+    TodoList(todoList = todoItems,
+        onItemAdd = { todoViewModel.addItem(it) },
+        onItemRemove = { todoViewModel.removeItem(it) })
 }
 
 @Composable
-private fun TodoList(todoList: List<TodoItem>) {
+private fun TodoList(
+    todoList: List<TodoItem>,
+    onItemAdd: (TodoItem) -> Unit,
+    onItemRemove: (TodoItem) -> Unit
+) {
     Column(modifier = Modifier
         .height(320.dp)
     ) {
@@ -33,11 +55,13 @@ private fun TodoList(todoList: List<TodoItem>) {
             contentPadding = PaddingValues(8.dp, 12.dp)
         ) {
             items(todoList) {
-                TodoRow(todoItem = it)
+                TodoRow(
+                    todoItem = it,
+                    onItemClick = onItemRemove)
             }
         }
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { onItemAdd(generateRandomTodoItem()) },
             modifier = Modifier
                 .padding(6.dp)
                 .fillMaxWidth()
@@ -52,13 +76,15 @@ private fun TodoList(todoList: List<TodoItem>) {
 @Composable
 private fun TodoRow(
     todoItem: TodoItem,
+    onItemClick: (item: TodoItem) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Row( // 记得设置 fillMaxWidth()，否则不会均匀分布在两端
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
-        horizontalArrangement = Arrangement.SpaceBetween  // 子控件均匀分布
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .clickable { onItemClick(todoItem) },
+        horizontalArrangement = Arrangement.SpaceBetween,  // 子控件均匀分布
     ) {
         Text(
             text = todoItem.task
@@ -68,4 +94,10 @@ private fun TodoRow(
             contentDescription = stringResource(id = todoItem.icon.res)
         )
     }
+}
+
+private fun generateRandomTodoItem(): TodoItem {
+    val randomTask = "Task ${Random.nextInt(1000)}"
+    val randomIcon = TodoIcon.entries.toTypedArray().random()
+    return TodoItem(task = randomTask, randomIcon)
 }
