@@ -40,6 +40,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -73,6 +75,9 @@ private fun TodoItemInput(
 
     val listState = rememberLazyListState()
 
+    val keyboardController = LocalSoftwareKeyboardController.current // 软键盘控制器
+    val focusManager = LocalFocusManager.current // 焦点管理器
+
     Column(modifier = modifier) {
         // 新增的输入行
         Row(
@@ -95,6 +100,9 @@ private fun TodoItemInput(
                     viewModel.addItem(TodoItem(taskContent.value, currIcon.value))
                     taskContent.value = "" // ✅ 重置输入内容
                     currIcon.value = TodoIcon.Default // ✅ 重置图标
+                    // 👇 软键盘控制优化
+                    keyboardController?.hide() // 隐藏软键盘
+                    focusManager.clearFocus() // 清除输入框的焦点
                 },
                 shape = CircleShape,
                 colors = ButtonDefaults.buttonColors(),
