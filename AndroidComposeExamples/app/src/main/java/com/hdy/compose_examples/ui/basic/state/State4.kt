@@ -23,6 +23,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -43,6 +45,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.android.identity.documenttype.Icon
@@ -90,7 +93,15 @@ private fun TodoItemInput(
                 value = taskContent.value,
                 onValueChange = { taskContent.value = it },
                 modifier = Modifier.weight(1f),
-                placeholder = { Text("Enter task") }
+                placeholder = { Text("Enter task") },
+                // 👇 键盘选项和操作优化
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done), // 键盘右下角显示“完成”按钮
+                keyboardActions = KeyboardActions(
+                    onDone = {
+                        keyboardController?.hide()
+                        focusManager.clearFocus()
+                    }
+                )
             )
 
             Spacer(modifier = Modifier.width(8.dp))
@@ -100,9 +111,9 @@ private fun TodoItemInput(
                     viewModel.addItem(TodoItem(taskContent.value, currIcon.value))
                     taskContent.value = "" // ✅ 重置输入内容
                     currIcon.value = TodoIcon.Default // ✅ 重置图标
-                    // 👇 软键盘控制优化
-                    keyboardController?.hide() // 隐藏软键盘
-                    focusManager.clearFocus() // 清除输入框的焦点
+                    // 如果软键盘还显示
+                    keyboardController?.hide()
+                    focusManager.clearFocus()
                 },
                 shape = CircleShape,
                 colors = ButtonDefaults.buttonColors(),
@@ -144,7 +155,7 @@ private fun TodoItemInput(
 }
 
 @Composable
-fun AnimatedIconRow(
+private fun AnimatedIconRow(
     todoIcon: TodoIcon,
     onIconSelected: (TodoIcon) -> Unit,
     visible: Boolean,
@@ -167,7 +178,7 @@ fun AnimatedIconRow(
 }
 
 @Composable
-fun IconRow(
+private fun IconRow(
     todoIcon: TodoIcon,
     onIconSelected: (TodoIcon) -> Unit,
     modifier: Modifier = Modifier
@@ -185,7 +196,7 @@ fun IconRow(
 }
 
 @Composable
-fun SelectableIcon(
+private fun SelectableIcon(
     imageVector: ImageVector,
     description: String,
     onIconSelected: () -> Unit,
