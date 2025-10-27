@@ -24,6 +24,15 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
+
+// 动画规范:
+// 所有Animation API 通常都接受一个 AnimationSpec 参数来定制动画的行为：
+// spring： 基于物理特性的动画，默认类型，感觉更自然，可以中断。
+// tween： 基于时长的动画，使用 Easing 函数来控制速度曲线（如 FastOutSlowInEasing）。
+// keyframes： 允许你在动画的不同时间点（关键帧）指定特定的值。
+// repeatable / infiniteRepeatable： 用于重复执行动画。
+// snap： 立即跳到最终值，没有动画过程。
+
 // 基于值的动画
 
 // 用于对单个值（如颜色、大小、透明度等）的变化添加动画效果。
