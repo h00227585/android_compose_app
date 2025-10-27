@@ -34,6 +34,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.hdy.compose_examples.ui.basic.anim.Animation1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout2
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout3
@@ -163,6 +164,14 @@ fun BasicScreen(
 @Composable
 private fun BodyContent(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
+        // 动画
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Animation1()
+        }
+
         // state
         item {
             HorizontalDivider(
