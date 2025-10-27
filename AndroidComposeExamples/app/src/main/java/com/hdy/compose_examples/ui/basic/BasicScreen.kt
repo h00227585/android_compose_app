@@ -39,6 +39,7 @@ import com.hdy.compose_examples.ui.basic.anim.Animation2
 import com.hdy.compose_examples.ui.basic.anim.Animation3
 import com.hdy.compose_examples.ui.basic.anim.Animation4
 import com.hdy.compose_examples.ui.basic.anim.Animation5
+import com.hdy.compose_examples.ui.basic.anim.Animation6
 import com.hdy.compose_examples.ui.basic.gesture.Gesture1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout2
@@ -207,6 +208,12 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 thickness = 2.dp,
                 color = (MaterialTheme.colorScheme.primary))
             Animation5()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Animation6()
         }
 
         // state
