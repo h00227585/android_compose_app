@@ -41,6 +41,8 @@ import com.hdy.compose_examples.ui.basic.anim.Animation4
 import com.hdy.compose_examples.ui.basic.anim.Animation5
 import com.hdy.compose_examples.ui.basic.anim.Animation6
 import com.hdy.compose_examples.ui.basic.gesture.Gesture1
+import com.hdy.compose_examples.ui.basic.gesture.Gesture2
+import com.hdy.compose_examples.ui.basic.gesture.Gesture3
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout2
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout3
@@ -176,6 +178,18 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 thickness = 2.dp,
                 color = (MaterialTheme.colorScheme.primary))
             Gesture1()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Gesture2()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Gesture3()
         }
 
         // 动画
