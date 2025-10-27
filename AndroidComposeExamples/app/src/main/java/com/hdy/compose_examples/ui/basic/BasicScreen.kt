@@ -39,6 +39,7 @@ import com.hdy.compose_examples.ui.basic.anim.Animation2
 import com.hdy.compose_examples.ui.basic.anim.Animation3
 import com.hdy.compose_examples.ui.basic.anim.Animation4
 import com.hdy.compose_examples.ui.basic.anim.Animation5
+import com.hdy.compose_examples.ui.basic.gesture.Gesture1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout1
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout2
 import com.hdy.compose_examples.ui.basic.layout.ConstraintLayout3
@@ -168,6 +169,14 @@ fun BasicScreen(
 @Composable
 private fun BodyContent(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
+        // gesture
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            Gesture1()
+        }
+
         // 动画
         item {
             HorizontalDivider(
