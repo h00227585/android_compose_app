@@ -3,7 +3,6 @@ package com.hdy.compose_examples.ui.basic.anim
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -14,7 +13,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -24,11 +22,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
-import com.hdy.compose_examples.utils.Log
 
 // 基于值的动画
+
+// 用于对单个值（如颜色、大小、透明度等）的变化添加动画效果。
+//
+// animate*AsState 函数族：
+// 这是最简单直接的 API，用于基于状态（State）的变化对单个值进行动画处理。例如：
+// animateFloatAsState：动画 Float 值。
+// animateColorAsState：动画 Color 值。
+// animateDpAsState：动画 Dp 值。
+// animateOffsetAsState：动画 Offset 值等。
+//
+// Animatable：
+// 一个更底层的、基于协程的单值动画 API，允许你更精细地控制动画的启动和停止（例如使用 animateTo 或 snapTo）。
 
 @Composable
 fun Animation1(modifier: Modifier = Modifier) {

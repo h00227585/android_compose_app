@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 // 内容大小动画: modifier
-//
+// animateContentSize Modifier： 专门用于动画化可组合项的大小变化。
 // 添加animateContentSize()后更平滑
 
 @Composable

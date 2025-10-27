@@ -39,6 +39,13 @@ import com.hdy.compose_examples.utils.Log
 
 // 可见性动画
 
+// AnimatedVisibility：
+// 用于在组件显示和隐藏时添加淡入/淡出、展开/收缩等动画效果。
+// AnimatedContent：
+// 用于在两个不同内容之间平滑过渡时添加动画（例如，当内容根据状态发生变化时）。
+// Crossfade：
+// 一个简化的版本，用于在两个可组合项之间进行交叉淡入淡出切换。
+
 @Composable
 fun Animation2(modifier: Modifier = Modifier) {
     Column(

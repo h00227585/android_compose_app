@@ -26,6 +26,13 @@ import androidx.compose.ui.unit.dp
 
 // 过渡动画/组合动画/同步动画
 // 多个属性同时变化
+//
+// updateTransition：
+// 用于创建和管理一个或多个动画的 Transition 实例。 当 targetState 改变时，它会根据定义好的规范驱动所有子动画。
+// Transition 的扩展函数：
+// 在 Transition 内部，你可以使用如 animateFloat, animateColor 等函数来定义各个属性的动画。
+// createChildTransition：
+// 用于在父转换中创建子转换，有助于解耦复杂的动画逻辑。
 
 @Composable
 fun Animation4(modifier: Modifier = Modifier) {
@@ -37,7 +44,7 @@ fun Animation4(modifier: Modifier = Modifier) {
     }
 }
 
-// 1. 定义状态
+// 定义状态
 enum class BoxState {
     Collapsed, // 收缩状态
     Expanded   // 展开状态
@@ -45,20 +52,20 @@ enum class BoxState {
 
 @Composable
 fun TransitionAnimationExample() {
-    // 2. 创建一个控制过渡的 State 变量
+    // 创建一个控制过渡的 State 变量
     var currentState by remember { mutableStateOf(BoxState.Collapsed) }
 
-    // 3. 创建 Transition 实例，并将其 targetState 设置为 currentState
+    // 创建 Transition 实例，并将其 targetState 设置为 currentState
     val transition = updateTransition(
         targetState = currentState,
         label = "BoxStateTransition"
     )
 
-    // 4. 定义动画规范（可选，这里使用 tween）
+    // 定义动画规范（可选，这里使用 tween）
     val animationSpec = tween<Color>(durationMillis = 500) // 颜色动画时间
     val sizeAnimationSpec = tween<Dp>(durationMillis = 500) // 尺寸动画时间
 
-    // 5. 在 Transition 中定义各个属性的动画值
+    // 在 Transition 中定义各个属性的动画值
 
     // 动画背景颜色
     val animatedColor by transition.animateColor(
@@ -83,13 +90,13 @@ fun TransitionAnimationExample() {
         label = "PaddingSize"
     )
 
-    // 6. 组合 UI 并应用动画值
+    // 组合 UI 并应用动画值
     Box(
         modifier = Modifier
             .padding(24.dp)
             .background(animatedColor, RoundedCornerShape(8.dp))
             .clickable {
-                // 7. 改变状态以触发过渡动画
+                // 改变状态以触发过渡动画
                 currentState = if (currentState == BoxState.Collapsed) {
                     BoxState.Expanded
                 } else {
