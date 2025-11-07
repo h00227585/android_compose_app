@@ -60,6 +60,8 @@ import com.hdy.compose_examples.ui.basic.layout.List1
 import com.hdy.compose_examples.ui.basic.layout.List2
 import com.hdy.compose_examples.ui.basic.layout.List3
 import com.hdy.compose_examples.ui.basic.layout.StdLayout
+import com.hdy.compose_examples.ui.basic.side_effect.SideEffect1
+import com.hdy.compose_examples.ui.basic.side_effect.SideEffect2
 import com.hdy.compose_examples.ui.basic.state.State1
 import com.hdy.compose_examples.ui.basic.state.State2
 import com.hdy.compose_examples.ui.basic.state.State3
@@ -176,6 +178,20 @@ fun BasicScreen(
 @Composable
 private fun BodyContent(modifier: Modifier = Modifier) {
     LazyColumn(modifier = modifier) {
+        // side effect
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            SideEffect1(100)
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            SideEffect2()
+        }
+
         // gesture
         item {
             HorizontalDivider(
