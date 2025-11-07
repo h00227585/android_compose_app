@@ -63,6 +63,7 @@ import com.hdy.compose_examples.ui.basic.layout.StdLayout
 import com.hdy.compose_examples.ui.basic.side_effect.SideEffect1
 import com.hdy.compose_examples.ui.basic.side_effect.SideEffect2
 import com.hdy.compose_examples.ui.basic.side_effect.SideEffect3
+import com.hdy.compose_examples.ui.basic.side_effect.SideEffect4
 import com.hdy.compose_examples.ui.basic.state.State1
 import com.hdy.compose_examples.ui.basic.state.State2
 import com.hdy.compose_examples.ui.basic.state.State3
@@ -197,6 +198,12 @@ private fun BodyContent(modifier: Modifier = Modifier) {
                 thickness = 2.dp,
                 color = (MaterialTheme.colorScheme.primary))
             SideEffect3()
+        }
+        item {
+            HorizontalDivider(
+                thickness = 2.dp,
+                color = (MaterialTheme.colorScheme.primary))
+            SideEffect4()
         }
 
         // gesture
