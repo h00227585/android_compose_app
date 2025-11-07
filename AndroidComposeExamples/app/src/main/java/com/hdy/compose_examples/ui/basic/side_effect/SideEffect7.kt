@@ -17,7 +17,10 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun SideEffect7() {
-    LoginForm()
+    Column {
+        LoginForm()
+        FilteredListExample()
+    }
 }
 
 @Composable
@@ -42,3 +45,31 @@ fun LoginForm() {
         }
     }
 }
+
+@Composable
+fun FilteredListExample() {
+    var query by remember { mutableStateOf("") }
+    val users = remember { listOf("Alice", "Bob", "Charlie", "David") }
+
+    // 使用 derivedStateOf 派生过滤后的列表
+    val filteredUsers by remember {
+        derivedStateOf {
+            users.filter { it.startsWith(query, ignoreCase = true) }
+        }
+    }
+
+    Column {
+        TextField(
+            value = query,
+            onValueChange = { query = it },
+            label = { Text("搜索用户") }
+        )
+
+        Text("共 ${filteredUsers.size} 个结果")
+
+        filteredUsers.forEach { user ->
+            Text("• $user")
+        }
+    }
+}
+
