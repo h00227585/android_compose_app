@@ -8,6 +8,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import kotlinx.coroutines.launch
 
+
+// rememberCoroutineScope()
+
 @Composable
 fun SideEffect2(
     modifier: Modifier = Modifier) {
